@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AgoraARKit  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="AgoraARKit  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">AgoraARKit Docs</a> (68% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">AgoraARKit Reference</a>
+        <img id="carat" src="img/carat.png" />
+        AgoraARKit  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/ARAudience.html">ARAudience</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ARBroadcaster.html">ARBroadcaster</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/s:10AgoraARKitAAC">AgoraARKit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AgoraLobbyVC.html">AgoraLobbyVC</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Global%20Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Global%20Variables.html#/s:10AgoraARKit8logLevelAA03LogD0Ovp">logLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/LogLevel.html">LogLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:10AgoraARKit6lprintyySS_AA8LogLevelOtF">lprint(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='agoraarkit' class='heading'>AgoraARKit</h1>
+
+<p>Enabling apps to live stream AR video streams. <strong><a href="https://developer.apple.com/augmented-reality/">ARKit</a></strong>, uses the device&rsquo;s camera and motion sensors to project virtual conetent into a user&rsquo;s world. <strong>Agora.io</strong>, provides a <a href="https://docs.agora.io/en/Video/product_video?platform=All%20Platforms">video SDK</a> for building real-time video and audio communications applications. By combining Agora.io&rsquo;s Video SDK and ARKit, it enables developers to create many different applications across many different use-cases. </p>
+
+<p>This library provides three classes with managed user itnterfaces:</p>
+
+<ul>
+<li>Lobby: the pre-channel UIView, provides a text input for users to define their channel name and their role (broadcaster and audience)</li>
+<li>ARBroadcaster: User broadcasting their AR view in the live stream</li>
+<li>ARAudience: User viewing the remote user&rsquo;s AR session.</li>
+</ul>
+<h2 id='device-requirements' class='heading'>Device Requirements</h2>
+
+<p>AgoraARKit requires a minimum version of iOS 12.2, and supports the following devices:</p>
+
+<ul>
+<li>iPhone 6S or newer</li>
+<li>iPhone SE</li>
+<li>iPad (2017)</li>
+<li>All iPad Pro models</li>
+</ul>
+
+<p>iOS 12.2 can be downloaded from Apple’s Developer website.</p>
+<h2 id='dependancies' class='heading'>Dependancies</h2>
+
+<p>AgoraARKit relies on the <a href="https://docs.agora.io/en/Agora%20Platform/downloads">Agora.io Video SDK</a> and <a href="https://github.com/AFathi/ARVideoKit">ARVideoKit</a>.</p>
+<h2 id='support' class='heading'>Support</h2>
+
+<ul>
+<li><a href="https://docs.agora.io/en/Video/API%20Reference/oc/docs/headers/Agora-Objective-C-API-Overview.html">Agora.io iOS API</a></li>
+<li><a href="https://join.slack.com/t/agoraiodev/shared_invite/enQtNjk0OTg4ODgyNTc5LTczOWQ0YjBkMTMwZDFmYzViYjIxNjg4YTM0OWEzZjdkODM1NDNmOTM1ZTE4Y2Q1ZWUwMjNjMzMxMmZiNGI3ODg">Join the Agoira.io Developer Slack community</a></li>
+</ul>
+<h2 id='quick-start-guide' class='heading'>Quick start guide</h2>
+
+<p>To get started with the AgoraARVideoKit, please follow the steps below to </p>
+<h3 id='set-up-using-cocoapods-coming-soon' class='heading'>Set up using CocoaPods (coming soon)</h3>
+
+<blockquote>
+<p>NOTE: CocoaPods is not currently set up <em>(use Manual Setup below)</em></p>
+
+<ol>
+<li>Add to your podfile:</li>
+</ol>
+</blockquote>
+
+<p><code>pod &#39;AgoraARKit&#39;</code></p>
+
+<ol>
+<li>In Terminal, navigate to your project folder, then:</li>
+</ol>
+
+<p><code>pod update</code></p>
+
+<p><code>pod install</code></p>
+
+<ol>
+<li>Add <code>NSCameraUsageDescription</code> and <code>NSMicrophoneUsageDescription</code> to plist with a brief explanation (see demo project for an example)</li>
+</ol>
+<h3 id='set-up-manually' class='heading'>Set up manually</h3>
+
+<ol>
+<li>Add all files from the <code><a href="Classes.html#/s:10AgoraARKitAAC">AgoraARKit</a></code> directory to your project.</li>
+<li>Import <a href="https://github.com/AFathi/ARVideoKit"><code>ARVideoKit</code></a> and <a href="https://docs.agora.io/en/Agora%20Platform/downloads"><code>Agora.io Video SDK</code></a> SDKS</li>
+<li>Add <code>NSCameraUsageDescription</code> and <code>NSMicrophoneUsageDescription</code> to plist with a brief explanation (see demo project for an example)</li>
+</ol>
+<h3 id='implementation' class='heading'>Implementation</h3>
+
+<ol>
+<li><p>once you have imported the AgoraARKit and its dependancies, open your <code>ViewController.swift</code> and add:</p>
+<pre class="highlight plaintext"><code>import AgoraARKit
+</code></pre></li>
+<li><p>Next set your <code>ViewController</code> class to inherit from <code><a href="Classes/AgoraLobbyVC.html">AgoraLobbyVC</a></code> and set your Agora App Id with the <code>loadView</code> method. If you want to set a custom image for the Lobby view, set it using the <code>bannerImage</code> property.</p>
+<pre class="highlight plaintext"><code>override func loadView() {
+super.loadView()
+
+AgoraARKit.agoraAppId = ""
+
+// set the banner image within the initial view
+if let agoraLogo = UIImage(named: "ar-support-icon") {
+    self.bannerImage = agoraLogo
+}
+}
+</code></pre></li>
+</ol>
+<h2 id='customization' class='heading'>Customization</h2>
+
+<p>The AgoraARKit classes are extendtable so you can subclass them to customize them as needed. </p>
+<h3 id='lobbyvc' class='heading'>LobbyVC</h3>
+
+<p>Since we are already inheriting from the <code><a href="Classes/AgoraLobbyVC.html">AgoraLobbyVC</a></code>, let&rsquo;s <code>override</code> the <code>joinSession</code> and <code>createSession</code> methods within our <code>ViewController</code> to set the images for the audience and broadcaster views.</p>
+
+<p>Custom images in Audience view</p>
+<pre class="highlight plaintext"><code>@IBAction override func joinSession() {
+    if let channelName = self.userInput.text {
+        if channelName != "" {
+            let arAudienceVC = ARAudience()
+            if let exitBtnImage = UIImage(named: "exit") {
+                arAudienceVC.backBtnImage = exitBtnImage
+            }
+            arAudienceVC.channelName = channelName
+            arAudienceVC.modalPresentationStyle = .fullScreen
+            self.present(arAudienceVC, animated: true, completion: nil)
+        } else {
+            // TODO: add visible msg to user
+            print("unable to join a broadcast without a channel name")
+        }
+    }
+}
+</code></pre>
+
+<p>Custom images in Broadcaster view</p>
+<pre class="highlight plaintext"><code>@IBAction override func createSession() {
+    if let channelName = self.userInput.text {
+        if channelName != "" {
+            let arBroadcastVC = ARBroadcaster()
+            if let exitBtnImage = UIImage(named: "exit") {
+                arBroadcastVC.backBtnImage = exitBtnImage
+            }
+            if let micBtnImage = UIImage(named: "mic"),
+                let muteBtnImage = UIImage(named: "mute"),
+                let watermakerImage = UIImage(named: "agora-logo") {
+                arBroadcastVC.micBtnImage = micBtnImage
+                arBroadcastVC.muteBtnImage = muteBtnImage
+                arBroadcastVC.watermarkImage = watermakerImage
+            }
+
+            arBroadcastVC.channelName = channelName
+            arBroadcastVC.modalPresentationStyle = .fullScreen
+            self.present(arBroadcastVC, animated: true, completion: nil)
+        } else {
+            // TODO: add visible msg to user
+            print("unable to launch a broadcast without a channel name")
+        }
+    }
+}
+</code></pre>
+<h3 id='arbroadcaster' class='heading'>ARBroadcaster</h3>
+
+<p>The ARBroadcaster is a UIViewController that implements the ARKit Session and Render Delegates along with the Agora RTC Engine Delegate methods. For a full list of each please see the documentation.</p>
+
+<p>The current <code><a href="Classes/ARBroadcaster.html">ARBroadcaster</a></code> class is setup for <code>WorldTracking</code>, but this can be easily updated to front facing. Below is an example of the <code><a href="Classes/ARBroadcaster.html">ARBroadcaster</a></code> extended for ARKit <code>FaceTracking</code> and also adds support for multiple broadcasters.</p>
+<pre class="highlight plaintext"><code>import ARKit
+
+class FaceBroadcaster : ARBroadcaster {
+
+    // placements dictionary
+    var faceNodes: [UUID:SCNNode] = [:]           // Dictionary of faces
+
+    override func viewDidLoad() {
+        super.viewDidLoad() 
+    }
+
+    override func setARConfiguration() {
+        print("setARConfiguration")        // Configure ARKit Session
+        let configuration = ARFaceTrackingConfiguration()
+        configuration.isLightEstimationEnabled = true
+        // run the config to start the ARSession
+        self.sceneView.session.run(configuration)
+        self.arvkRenderer?.prepare(configuration)
+    }
+
+    // anchor detection
+    override func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
+        super.renderer(renderer, didAdd: node, for: anchor)
+        guard let sceneView = renderer as? ARSCNView, anchor is ARFaceAnchor else { return }
+        /*
+         Write depth but not color and render before other objects.
+         This causes the geometry to occlude other SceneKit content
+         while showing the camera view beneath, creating the illusion
+         that real-world faces are obscuring virtual 3D objects.
+         */
+        let faceGeometry = ARSCNFaceGeometry(device: sceneView.device!)!
+        faceGeometry.firstMaterial!.colorBufferWriteMask = []
+        let occlusionNode = SCNNode(geometry: faceGeometry)
+        occlusionNode.renderingOrder = -1
+
+        let contentNode = SCNNode()
+        contentNode.addChildNode(occlusionNode)
+        node.addChildNode(contentNode)
+        faceNodes[anchor.identifier] = node
+    }
+}
+</code></pre>
+
+<p>&hellip;</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="http://github.com/digitallysavvy/AgoraARKit" target="_blank" rel="external">Hermes</a>. All rights reserved. (Last updated: 2020-02-19)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
