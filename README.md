@@ -19,6 +19,7 @@ iOS 12.2 can be downloaded from Apple’s Developer website.
 AgoraARKit relies on the [Agora.io Video SDK](https://docs.agora.io/en/Agora%20Platform/downloads) and [ARVideoKit](https://github.com/AFathi/ARVideoKit).
 
 ## Support
+- [AgoraARKit Documentation](https://agoraio-community.github.io/Agora-ARKit)
 - [Agora.io iOS API](https://docs.agora.io/en/Video/API%20Reference/oc/docs/headers/Agora-Objective-C-API-Overview.html)
 - [Join the Agoira.io Developer Slack community](https://join.slack.com/t/agoraiodev/shared_invite/enQtNjk0OTg4ODgyNTc5LTczOWQ0YjBkMTMwZDFmYzViYjIxNjg4YTM0OWEzZjdkODM1NDNmOTM1ZTE4Y2Q1ZWUwMjNjMzMxMmZiNGI3ODg)
 
@@ -122,7 +123,7 @@ Custom images in Broadcaster view
 ```
 
 ### ARBroadcaster
-The ARBroadcaster is a UIViewController that implements the ARKit Session and Render Delegates along with the Agora RTC Engine Delegate methods. For a full list of each please see the documentation.
+The ARBroadcaster is a UIViewController that implements the ARKit Session and Render Delegates along with the Agora RTC Engine Delegate methods. For a full list of each please see the [ARKit documentation](https://agoraio-community.github.io/Agora-ARKit).
 
 The current `ARBroadcaster` class is setup for `WorldTracking`, but this can be easily updated to front facing. Below is an example of the `ARBroadcaster` extended for ARKit `FaceTracking` and also adds support for multiple broadcasters.
 
