@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |spec|
   spec.name               = "AgoraARKit"
-  spec.version            = "1.0.0"
+  spec.version            = "1.0.2"
   spec.summary            = "AgoraARKit provides extendable implemention of the Agora.io Video SDK with ARKit."
   spec.description        = <<-DESC
                               AgoraARKit provides a bare bones implementation of the Agora.io Video SDK using ARKit as the video source. This framework uses a custom renderer (ARVideoKit) to generate a rendered video buffer of the ARSession, which is passed to the active Agora video stream.
