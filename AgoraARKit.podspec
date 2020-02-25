@@ -21,15 +21,19 @@ Pod::Spec.new do |spec|
   spec.platform           = :ios, "12.2"
   spec.swift_version      = "4.2"
   spec.requires_arc       = true
+  spec.static_framework = true
   spec.source             = { :git => "https://github.com/AgoraIO-Community/Agora-ARKit.git", :tag => "#{spec.version}" }
-  spec.source_files       = 'Sources/**/*.{swift}' 
+  spec.source_files       = 'AgoraARKit/**/*.{swift}' 
   spec.frameworks         = [
                               'ARKit',
                               'SceneKit',
                               'UIKit',
                               'CoreGraphics',
                               'Foundation',
+                              # 'AgoraRtcEngine_iOS' 
                             ]
   spec.dependency 'AgoraRtcEngine_iOS' 
-  spec.dependency 'ARVideoKit','~> 1.51'                         
+  spec.dependency 'ARVideoKit','~> 1.51' 
+  
+  # spec.framework = "AgoraRtcEngine_iOS"                      
 end

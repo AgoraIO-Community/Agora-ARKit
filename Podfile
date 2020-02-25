@@ -7,7 +7,7 @@ target 'AgoraARKit' do
 
   # Pods for AgoraARKit
   pod 'AgoraRtcEngine_iOS'
-  pod 'ARVideoKit', :git => 'https://github.com/AFathi/ARVideoKit', :branch => 'swift_4_2' # record ARKit session
+  pod 'ARVideoKit','~> 1.51' # record ARKit session
 
   target 'AgoraARKitTests' do
     # Pods for testing
