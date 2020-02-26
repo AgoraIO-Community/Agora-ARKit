@@ -29,80 +29,80 @@ open class ARAudience: UIViewController {
     
      Defaults to `.liveBroadcasting`
      */
-    var channelProfile: AgoraChannelProfile = .liveBroadcasting
+    public var channelProfile: AgoraChannelProfile = .liveBroadcasting
     /**
     Flag to determine whether the device enable to speaker mode when entering the channel
      
      Defaults to `true`
      */
-    var defaultToSpeakerPhone: Bool = true
+    public var defaultToSpeakerPhone: Bool = true
     /**
     Name of the channel to use when connecting to an Agora channel.
      
      - Note: Defaults to `nil`
      - Warning: This value must be set before the ViewController is presented.
     */
-    var channelName: String!
+    public var channelName: String!
     /**
     A reference to the host user.
      */
-    var remoteUser: UInt?                       // remote user id
+    public var remoteUser: UInt?                       // remote user id
     
     // MARK: UI properties
     /**
     A `UIView` representing the video stream of the host user
      */
-    var remoteVideoView: UIView!                // video stream from remote user
+    public var remoteVideoView: UIView!                // video stream from remote user
     
     /**
     A Dictionary of `UIView`s representing the video streams of the host users
      */
-    var remoteVideoViews: [UInt:UIView] = [:]    // Dictionary of remote views
+    public var remoteVideoViews: [UInt:UIView] = [:]    // Dictionary of remote views
     /**
     The `remoteViewBackgroundColor` is the background color for the UIView until the remote video stream is received.
      
      Defaults to `.lightGray`
      */
-    var remoteViewBackgroundColor: UIColor = .lightGray
+    public var remoteViewBackgroundColor: UIColor = .lightGray
     /**
     A `UIButton` that dismisses the view controller when tapped
      */
-    var backBtn: UIButton!
+    public var backBtn: UIButton!
     /**
     A `CGRect` that represents the frame for the `backBtn`.
     - Note: If a value is not explicitly set, the managed UI will uses default settings
      */
-    var backBtnFrame: CGRect?
+    public var backBtnFrame: CGRect?
     /**
     An optional `UIImage` that is used as the image for the `backBtn`
      */
-    var backBtnImage: UIImage?
+    public var backBtnImage: UIImage?
     /**
     The default value to display if an image is not set for the `backBtn`
      */
-    var backBtnTextLabel: String = "x"
+    public var backBtnTextLabel: String = "x"
     /**
     An optional `UIImageView` that displays a watermark over part of the video.
      */
-    var watermark: UIImageView?
+    public var watermark: UIImageView?
     /**
     An optional `UIImage` that is used as the image for the `watermark`
      - Warning: If this value is not set, then a watermark will not be displayed.
      */
-    var watermarkImage: UIImage?
+    public var watermarkImage: UIImage?
     /**
     A `CGRect` that represents the frame for the `watermark`,
      - Note: If a `watermarkImage` is set but `watermarkFrame` is not explicitly set, the managed UI will uses default settings
      */
-    var watermarkFrame: CGRect?
+    public var watermarkFrame: CGRect?
     /**
     A `CGFloat` that represents the transparency of the `watermark`
      */
-    var watermarkAlpha: CGFloat = 0.25
+    public var watermarkAlpha: CGFloat = 0.25
     
     // Debugging
-    var showLogs: Bool = true
-    internal let debug: Bool = true
+    public var showLogs: Bool = true
+    public var debug: Bool = true
     
     // MARK: VC Events
 

@@ -18,13 +18,13 @@ open class ARBroadcaster: UIViewController {
     /**
     A reference to the `ARSCNView`
      */
-    var sceneView: ARSCNView!
+    public var sceneView: ARSCNView!
     /**
     The `ARWorldTrackingConfiguration`'s setting for plane detection
      
      Defaults to `nil`
      */
-    var planeDetection: ARWorldTrackingConfiguration.PlaneDetection?
+    public var planeDetection: ARWorldTrackingConfiguration.PlaneDetection?
     /**
         Setting to enable default lighting within the ARSCNView
      */
@@ -52,15 +52,15 @@ open class ARBroadcaster: UIViewController {
      */
     var agoraKit: AgoraRtcEngineKit!                    // Agora.io Video Engine reference
     var arVideoSource: ARVideoSource = ARVideoSource()  // for passing the AR camera as the stream
-    var channelProfile: AgoraChannelProfile = .liveBroadcasting
-    var frameRate: AgoraVideoFrameRate = .fps30
-    var videoDimension: CGSize = AgoraVideoDimension1280x720
-    var videoBitRate: Int = AgoraVideoBitrateStandard
-    var videoOutputOrientationMode: AgoraVideoOutputOrientationMode = .fixedPortrait
-    var audioSampleRate: UInt = 44100
-    var audioChannelsPerFrame: UInt = 1
-    var defaultToSpeakerPhone: Bool = true
-    var channelName: String!                            // name of the channel to join
+    public var channelProfile: AgoraChannelProfile = .liveBroadcasting
+    public var frameRate: AgoraVideoFrameRate = .fps30
+    public var videoDimension: CGSize = AgoraVideoDimension1280x720
+    public var videoBitRate: Int = AgoraVideoBitrateStandard
+    public var videoOutputOrientationMode: AgoraVideoOutputOrientationMode = .fixedPortrait
+    public var audioSampleRate: UInt = 44100
+    public var audioChannelsPerFrame: UInt = 1
+    public var defaultToSpeakerPhone: Bool = true
+    public var channelName: String!                            // name of the channel to join
     
     // MARK: ARVideoKit properties
     var arvkRenderer: RecordAR!                         // ARVideoKit Renderer - used as an off-screen renderer
@@ -73,34 +73,34 @@ open class ARBroadcaster: UIViewController {
     /**
     A `UIButton` that toggles the microphone
      */
-    var micBtn: UIButton!
-    var micBtnFrame: CGRect?
-    var micBtnImage: UIImage?
-    var micBtnTextLabel: String = "un-mute"
-    var muteBtnImage: UIImage?
-    var muteBtnTextLabel: String = "mute"
+    public var micBtn: UIButton!
+    public var micBtnFrame: CGRect?
+    public var micBtnImage: UIImage?
+    public var micBtnTextLabel: String = "un-mute"
+    public var muteBtnImage: UIImage?
+    public var muteBtnTextLabel: String = "mute"
     /**
     A `UIButton` that dismisses the view controller when tapped
      */
-    var backBtn: UIButton!
-    var backBtnFrame: CGRect?
-    var backBtnImage: UIImage?
-    var backBtnTextLabel: String = "x"
+    public var backBtn: UIButton!
+    public var backBtnFrame: CGRect?
+    public var backBtnImage: UIImage?
+    public var backBtnTextLabel: String = "x"
     
     /**
     An optional `UIImageView` that displays a watermark over part of the video.
      */
-    var watermark: UIImageView?
-    var watermarkImage: UIImage?
-    var watermarkFrame: CGRect?
-    var watermarkAlpha: CGFloat = 0.25
+    public var watermark: UIImageView?
+    public var watermarkImage: UIImage?
+    public var watermarkFrame: CGRect?
+    public var watermarkAlpha: CGFloat = 0.25
     
-    var viewBackgroundColor: UIColor = .black
+    public var viewBackgroundColor: UIColor = .black
     
     
     // Debugging
-    internal let debug: Bool = false                             // toggle the debug logs
-    var showLogs: Bool = true
+    public var debug: Bool = false                             // toggle the debug logs
+    public var showLogs: Bool = true
     
     // MARK: VC Events
     /**

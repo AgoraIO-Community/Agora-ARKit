@@ -12,28 +12,28 @@ import AgoraRtcEngineKit
 class Broadcaster : UIViewController, AgoraRtcEngineDelegate {
     
     var agoraKit: AgoraRtcEngineKit!        // Agora.io Video Engine reference
-    var channelName: String!                // name of the channel to join
+    public var channelName: String!                // name of the channel to join
     
-    var localVideoView: UIView!             // video stream of local camera
-    var remoteVideoViews: [UInt:UIView] = [:]
+    public var localVideoView: UIView!             // video stream of local camera
+    public var remoteVideoViews: [UInt:UIView] = [:]
     
     var dataStreamId: Int! = 27                         // id for data stream
     var streamIsEnabled: Int32 = -1                     // acts as a flag to keep track if the data stream is enabled
     
     // MARK: UI properties
-    var micBtn: UIButton!
-    var micBtnFrame: CGRect?
-    var micBtnImage: UIImage?
-    var micBtnTextLabel: String = "un-mute"
-    var muteBtnImage: UIImage?
-    var muteBtnTextLabel: String = "mute"
+    public var micBtn: UIButton!
+    public var micBtnFrame: CGRect?
+    public var micBtnImage: UIImage?
+    public var micBtnTextLabel: String = "un-mute"
+    public var muteBtnImage: UIImage?
+    public var muteBtnTextLabel: String = "mute"
     
-    var backBtn: UIButton!
-    var backBtnFrame: CGRect?
-    var backBtnImage: UIImage?
-    var backBtnTextLabel: String = "x"
+    public var backBtn: UIButton!
+    public var backBtnFrame: CGRect?
+    public var backBtnImage: UIImage?
+    public var backBtnTextLabel: String = "x"
     
-    let debug = true
+    public var debug = true
     
     override func viewDidLoad() {
         super.viewDidLoad()

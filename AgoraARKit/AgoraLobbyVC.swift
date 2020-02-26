@@ -14,45 +14,45 @@ The `AgoraLobbyVC` is a `UIViewController` that provides a manged UIView that gi
 */
 open class AgoraLobbyVC: UIViewController  {
 
-    var debug : Bool = false
+    public var debug : Bool = false
     
     // UI properties
     /**
     The `UIImageView` containing the banner image vsible within the Lobby view
      */
-    var banner: UIImageView?
+    public var banner: UIImageView?
     /**
     The `UIImage` representing the banner image vsible within the Lobby view.
      */
-    var bannerImage: UIImage?
+    public var bannerImage: UIImage?
     /**
     The `CGRect` that is used as the `.frame` for the `banner`
      */
-    var bannerFrame: CGRect?
+    public var bannerFrame: CGRect?
     /**
     The `String` used to set the text value for the button that launches the ARBroadcaster
      */
-    var broadcastBtnText: String = "Broadcast"
+    public var broadcastBtnText: String = "Broadcast"
     /**
     The `UIColor` used to set the text color for the button that launches the ARBroadcaster
      */
-    var broadcastBtnColor: UIColor = .systemBlue
+    public var broadcastBtnColor: UIColor = .systemBlue
     /**
     The `String` used to set the text value for the button that launches the ARAudience
      */
-    var audienceBtnText: String = "Audience"
+    public var audienceBtnText: String = "Audience"
     /**
     The `UIColor` used to set the text color for the button that launches the ARAudience
      */
-    var audienceBtnColor: UIColor = .systemGray
+    public var audienceBtnColor: UIColor = .systemGray
     /**
     The  `UITextField` used to set the set the Agora channel name
      */
-    var userInput: UITextField!
+    public var userInput: UITextField!
     /**
     The `String` used to set the set the placeholder text value for the `userInput` text field
      */
-    var textFieldPlaceholder: String = "Channel Name"
+    public var textFieldPlaceholder: String = "Channel Name"
     
     
     // MARK: VC Events
