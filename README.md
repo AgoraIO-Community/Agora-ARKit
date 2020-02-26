@@ -27,7 +27,7 @@ AgoraARKit relies on the [Agora.io Video SDK](https://docs.agora.io/en/Agora%20P
 ## Quick start guide
 To get started with the AgoraARVideoKit, please follow the steps below to 
 
-### Set up using CocoaPods (coming soon)
+### Set up using CocoaPods
 > NOTE: CocoaPods is not currently set up _(use Manual Setup below)_
 1. Add to your podfile:
 
