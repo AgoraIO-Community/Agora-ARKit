@@ -1,11 +1,3 @@
-#
-#  Be sure to run `pod spec lint AgoraARKit.podspec' to ensure this is a
-#  valid spec and to remove all comments including this before submitting the spec.
-#
-#  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
-#  To see working Podspecs in the CocoaPods repo see https://github.com/CocoaPods/Specs/
-#
-
 Pod::Spec.new do |spec|
   spec.name               = "AgoraARKit"
   spec.version            = "1.0.2"
@@ -29,11 +21,8 @@ Pod::Spec.new do |spec|
                               'SceneKit',
                               'UIKit',
                               'CoreGraphics',
-                              'Foundation',
-                              # 'AgoraRtcEngine_iOS' 
+                              'Foundation'
                             ]
   spec.dependency 'AgoraRtcEngine_iOS' 
-  spec.dependency 'ARVideoKit','~> 1.51' 
-  
-  # spec.framework = "AgoraRtcEngine_iOS"                      
+  spec.dependency 'ARVideoKit','~> 1.51'                 
 end
