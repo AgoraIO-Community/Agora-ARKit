@@ -32,10 +32,7 @@ To get started with the AgoraARVideoKit, please follow the steps below to
 
 `pod 'AgoraARKit'`
 
-
 2. In Terminal, navigate to your project folder, then:
-
-`pod update`
 
 `pod install`
 
@@ -68,6 +65,8 @@ override func loadView() {
     }
 }
 ```
+
+[View the AgoraARKit QuickStart guide on Medium](https://medium.com/@hermes_11327/agoraarkit-quickstart-guide-384028c66163)
 
 ## Customization
 The AgoraARKit classes are extendtable so you can subclass them to customize them as needed. 
