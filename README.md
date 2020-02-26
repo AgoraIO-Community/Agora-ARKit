@@ -28,7 +28,6 @@ AgoraARKit relies on the [Agora.io Video SDK](https://docs.agora.io/en/Agora%20P
 To get started with the AgoraARVideoKit, please follow the steps below to 
 
 ### Set up using CocoaPods
-> NOTE: CocoaPods is not currently set up _(use Manual Setup below)_
 1. Add to your podfile:
 
 `pod 'AgoraARKit'`
@@ -40,7 +39,9 @@ To get started with the AgoraARVideoKit, please follow the steps below to
 
 `pod install`
 
-3. Add `NSCameraUsageDescription` and `NSMicrophoneUsageDescription` to plist with a brief explanation (see demo project for an example)
+3. Add `NSCameraUsageDescription`, `NSMicrophoneUsageDescription`, `NSPhotoLibraryAddUsageDescription`, and `NSPhotoLibraryUsageDescription` to plist with a brief explanation. The last two permissions are required by ARVideoKit because of its ability to store photos/videos. 
+
+[See demo project for an example](https://github.com/digitallysavvy/AgoraARKitDemo)
 
 ### Set up manually
 1. Add all files from the `AgoraARKit` directory to your project.
