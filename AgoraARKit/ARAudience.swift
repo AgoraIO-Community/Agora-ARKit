@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AgoraRtcEngineKit
+import AgoraRtcKit
 
 /**
 The `ARAudience` is a `UIViewController` that implements all the needed methods for the viewer (aundience member)  of the AR Live Stream. The class provides a manged UI for the audience user.
