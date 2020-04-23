@@ -6,7 +6,7 @@
 //  Copyright © 2020 Agora.io. All rights reserved.
 //
 
-import AgoraRtcEngineKit
+import AgoraRtcKit
 
 /**
 The `ARBroadcaster`implements the `AgoraRtcEngineDelegate` to handle the Agora RTC Engine events. Within these delegate functions the managed ui handles the UI  updates when a ARBroadcaster joins or leaves the channel.

@@ -8,7 +8,7 @@
 
 import UIKit
 import ARKit
-import AgoraRtcEngineKit
+import AgoraRtcKit
 import ARVideoKit
 import Foundation
 
@@ -63,7 +63,7 @@ open class ARBroadcaster: UIViewController {
     public var channelName: String!                            // name of the channel to join
     
     // MARK: ARVideoKit properties
-    var arvkRenderer: RecordAR!                         // ARVideoKit Renderer - used as an off-screen renderer
+    public var arvkRenderer: RecordAR!                         // ARVideoKit Renderer - used as an off-screen renderer
     
     // MARK: UI properties
     /**

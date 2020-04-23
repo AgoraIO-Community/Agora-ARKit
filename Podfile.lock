@@ -1,29 +1,20 @@
 PODS:
-  - AgoraRtcEngine_iOS (2.9.1)
+  - AgoraRtcEngine_iOS (3.0.0.1)
   - ARVideoKit (1.51)
 
 DEPENDENCIES:
   - AgoraRtcEngine_iOS
-  - ARVideoKit (from `https://github.com/AFathi/ARVideoKit`, branch `swift_4_2`)
+  - ARVideoKit (~> 1.51)
 
 SPEC REPOS:
   trunk:
     - AgoraRtcEngine_iOS
-
-EXTERNAL SOURCES:
-  ARVideoKit:
-    :branch: swift_4_2
-    :git: https://github.com/AFathi/ARVideoKit
-
-CHECKOUT OPTIONS:
-  ARVideoKit:
-    :commit: 350a67d63e4fe523a5f5c5ec842f32d6b96d23dc
-    :git: https://github.com/AFathi/ARVideoKit
+    - ARVideoKit
 
 SPEC CHECKSUMS:
-  AgoraRtcEngine_iOS: b2eedd8f9ab47b71163f3285e836bd23feb43fff
+  AgoraRtcEngine_iOS: f7fb9870f884dfa91fc3295c6594ea089f38c481
   ARVideoKit: d575d98274aab060748514aa32ac964c24c1923f
 
-PODFILE CHECKSUM: fe5e73326eab2abdb71b9893dfbe9b1e53b9a98f
+PODFILE CHECKSUM: 25c38229615005357eadf78cd73014459f6e774f
 
 COCOAPODS: 1.8.4
