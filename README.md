@@ -69,7 +69,7 @@ override func loadView() {
 [View the AgoraARKit QuickStart guide on Medium](https://medium.com/@hermes_11327/agoraarkit-quickstart-guide-384028c66163)
 
 ## Customization
-The AgoraARKit classes are extendtable so you can subclass them to customize them as needed. 
+The AgoraARKit classes are extendable so you can subclass them to customize them as needed. 
 
 ### LobbyVC
 Since we are already inheriting from the `AgoraLobbyVC`, let's `override` the `joinSession` and `createSession` methods within our `ViewController` to set the images for the audience and broadcaster views.
