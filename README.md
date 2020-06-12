@@ -42,7 +42,7 @@ To get started with the AgoraARVideoKit, please follow the steps below to
 
 ### Set up manually
 1. Add all files from the `AgoraARKit` directory to your project.
-2. Import [`ARVideoKit`](https://github.com/AFathi/ARVideoKit) and [`Agora.io Video SDK`](https://docs.agora.io/en/Agora%20Platform/downloads) SDKS
+2. Import [`ARVideoKit`](https://github.com/AFathi/ARVideoKit) and [`Agora.io Video SDK`](https://docs.agora.io/en/Agora%20Platform/downloads) SDK
 3. Add `NSCameraUsageDescription` and `NSMicrophoneUsageDescription` to plist with a brief explanation (see demo project for an example)
 
 ### Implementation
