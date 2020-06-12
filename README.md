@@ -15,7 +15,7 @@ AgoraARKit requires a minimum version of iOS 12.2, and supports the following de
 
 iOS 12.2 can be downloaded from Apple’s Developer website.
 
-## Dependancies
+## Dependencies
 AgoraARKit relies on the [Agora.io Video SDK](https://docs.agora.io/en/Agora%20Platform/downloads) and [ARVideoKit](https://github.com/AFathi/ARVideoKit).
 
 ## Support
