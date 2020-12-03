@@ -15,6 +15,14 @@ import AgoraRtcKit
  */
 public class ARVideoSource: NSObject, AgoraVideoSourceProtocol {
     
+    public func captureType() -> AgoraVideoCaptureType {
+        return .camera
+    }
+    
+    public func contentHint() -> AgoraVideoContentHint {
+        return .none
+    }
+    
     public var consumer: AgoraVideoFrameConsumer?
     public var rotation: AgoraVideoRotation = .rotationNone
     
