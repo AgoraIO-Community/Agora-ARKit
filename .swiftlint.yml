@@ -1,0 +1,12 @@
+line_length: 
+  ignores_comments: true
+excluded:
+  - Pods
+disabled_rules:
+  - todo
+  - function_parameter_count
+identifier_name:
+  excluded:
+    - dx
+    - dy
+    - dz

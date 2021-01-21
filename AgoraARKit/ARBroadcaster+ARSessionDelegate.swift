@@ -11,21 +11,21 @@ import ARKit
  `ARBroadcaster` implements the `ARSessionDelegate` and uses the `didOutputAudioSampleBuffer` callback to pass the audio data provided by the ARKit session to the active Agora stream as part of the custom audio source*
  */
 extension ARBroadcaster: ARSessionDelegate {
-    
+
     open func session(_ session: ARSession, didUpdate frame: ARFrame) {
         // updated every frame.
     }
-    
+
     open func session(_ session: ARSession, didOutputAudioSampleBuffer audioSampleBuffer: CMSampleBuffer) {
         guard self.agoraKit != nil else { return }
         self.agoraKit.pushExternalAudioFrameSampleBuffer(audioSampleBuffer)
     }
-    
+
     open func session(_ session: ARSession, didFailWithError error: Error) {
-        lprint("session failed with error: \(error)", .Verbose)
+        lprint("session failed with error: \(error)", .verbose)
     }
-    
+
     open func sessionWasInterrupted(_ session: ARSession) {
-        lprint("sessionWasInterrupted", .Verbose)
+        lprint("sessionWasInterrupted", .verbose)
     }
 }

@@ -13,7 +13,7 @@ import ARVideoKit
 import Foundation
 
 open class ARBroadcaster: UIViewController {
-    
+
     // MARK: ARKit properties
     /**
     A reference to the `ARSCNView`
@@ -45,7 +45,7 @@ open class ARBroadcaster: UIViewController {
        Debug option  for the `ARTrackingConfiguration` to display debug data
     */
     open var arSceneDebugOptions: SCNDebugOptions = [.showWorldOrigin, .showFeaturePoints]
-    
+
     // MARK: Agora Properties
     /**
     A reference to the `AgoraRtcEngineKit`
@@ -54,22 +54,22 @@ open class ARBroadcaster: UIViewController {
     var arVideoSource: ARVideoSource = ARVideoSource()  // for passing the AR camera as the stream
     public var channelProfile: AgoraChannelProfile = .liveBroadcasting
     public var frameRate: AgoraVideoFrameRate = .fps30
-    public var videoDimension: CGSize = AgoraVideoDimension1280x720
+    public var videoDimension: CGSize = AgoraVideoDimension840x480
     public var videoBitRate: Int = AgoraVideoBitrateStandard
     public var videoOutputOrientationMode: AgoraVideoOutputOrientationMode = .fixedPortrait
     public var audioSampleRate: UInt = 44100
     public var audioChannelsPerFrame: UInt = 1
     public var defaultToSpeakerPhone: Bool = true
     public var channelName: String!                            // name of the channel to join
-    
+
     // MARK: ARVideoKit properties
-    public var arvkRenderer: RecordAR!                         // ARVideoKit Renderer - used as an off-screen renderer
-    
+    var arvkRenderer: RecordAR!                         // ARVideoKit Renderer - used as an off-screen renderer
+
     // MARK: UI properties
     /**
     A Dictionary of `UIView`s representing the video streams of the host users
      */
-    var remoteVideoViews: [UInt:UIView] = [:]    // Dictionary of remote views
+    var remoteVideoViews: [UInt: UIView] = [:]    // Dictionary of remote views
     /**
     A `UIButton` that toggles the microphone
      */
@@ -86,7 +86,7 @@ open class ARBroadcaster: UIViewController {
     public var backBtnFrame: CGRect?
     public var backBtnImage: UIImage?
     public var backBtnTextLabel: String = "x"
-    
+
     /**
     An optional `UIImageView` that displays a watermark over part of the video.
      */
@@ -94,14 +94,13 @@ open class ARBroadcaster: UIViewController {
     public var watermarkImage: UIImage?
     public var watermarkFrame: CGRect?
     public var watermarkAlpha: CGFloat = 0.25
-    
+
     public var viewBackgroundColor: UIColor = .black
-    
-    
+
     // Debugging
     public var debug: Bool = false                             // toggle the debug logs
     public var showLogs: Bool = true
-    
+
     // MARK: VC Events
     /**
     AgoraARKit uses the `viewDidLoad` method to create the UI, set up the Agora engine configuration, set the `ARSCNViewDelegate` / `ARSessionDeleagates`,  set up the off screen renderer and configure the SceneView's
@@ -109,10 +108,10 @@ open class ARBroadcaster: UIViewController {
     override open func viewDidLoad() {
         super.viewDidLoad()
         print("viewDidLoad")
-        
+
         self.view.backgroundColor = viewBackgroundColor
         createUI()
-        
+
         // Agora setup
         guard let agoraAppID = AgoraARKit.agoraAppId else { return }
         let agoraKit = AgoraRtcEngineKit.sharedEngine(withAppId: agoraAppID, delegate: self) // - init engine
@@ -120,12 +119,16 @@ open class ARBroadcaster: UIViewController {
         if channelProfile == .liveBroadcasting {
             agoraKit.setClientRole(.broadcaster)
         }
-        let videoConfig = AgoraVideoEncoderConfiguration(size: videoDimension, frameRate: frameRate, bitrate: videoBitRate, orientationMode: videoOutputOrientationMode)
-        agoraKit.setVideoEncoderConfiguration(videoConfig) // - set video encoding configuration (dimensions, frame-rate, bitrate, orientation
+        let videoConfig = AgoraVideoEncoderConfiguration(
+            size: videoDimension, frameRate: frameRate,
+            bitrate: videoBitRate, orientationMode: videoOutputOrientationMode
+        )
         agoraKit.enableVideo() // - enable video
-        agoraKit.setVideoSource(self.arVideoSource) // - set the video source to the custom AR source
+        // set the video source to the custom AR source
+        agoraKit.setVideoSource(self.arVideoSource)
+        // set video encoding configuration (dimensions, frame-rate, bitrate, orientation
+        agoraKit.setVideoEncoderConfiguration(videoConfig)
 //        agoraKit.enableExternalAudioSource(withSampleRate: audioSampleRate, channelsPerFrame: audioChannelsPerFrame) // - enable external audio souce (since video and audio are coming from seperate sources)
-        agoraKit.enableWebSdkInteroperability(true)
         self.agoraKit = agoraKit // set a reference to the Agora engine
 
         // set render delegate
@@ -150,7 +153,7 @@ open class ARBroadcaster: UIViewController {
            self.sceneView.debugOptions = arSceneDebugOptions
            self.sceneView.showsStatistics = showStatistics
         }
-       
+
         // add default lights to the scene
         self.sceneView.autoenablesDefaultLighting = enableDefaultLighting
         self.sceneView.automaticallyUpdatesLighting = autoUpdateLights
@@ -164,7 +167,7 @@ open class ARBroadcaster: UIViewController {
         print("viewWillAppear")        // Configure ARKit Session
 
     }
-    
+
     /**
     AgoraARKit joins the Agora channel within the `viewDidAppear`
     */
@@ -177,9 +180,9 @@ open class ARBroadcaster: UIViewController {
             self.setARConfiguration()
             joinChannel() // Agora - join the channel
         }
-        
+
     }
-    
+
     /**
     AgoraARKit pauses the AR session within the `viewWillDisappear`
     */
@@ -189,7 +192,7 @@ open class ARBroadcaster: UIViewController {
         // Cleanup the session as the view is removed from heirarchy
         self.sceneView.session.pause()
     }
-    
+
     /**
     Since Apple does not provide explicit de-initializers for the ARSCN, AgoraARKit use `viewDidDisappear` to free up resources and clean up the SceneView references.
     */
@@ -199,7 +202,7 @@ open class ARBroadcaster: UIViewController {
         sceneView.removeFromSuperview()
         sceneView = nil
     }
-    
+
     // MARK: Hide status bar
     /**
     AgoraARKit hides the status bar UI
@@ -207,7 +210,7 @@ open class ARBroadcaster: UIViewController {
     override open var prefersStatusBarHidden: Bool {
         return true
     }
-    
+
     // MARK: Agora Interface
     /**
     Conencts to the Agora channel, and sets the default audio route to speakerphone
@@ -223,14 +226,14 @@ open class ARBroadcaster: UIViewController {
         self.agoraKit.joinChannel(byToken: AgoraARKit.agoraToken, channelId: self.channelName, info: nil, uid: 0)
         UIApplication.shared.isIdleTimerDisabled = true     // Disable idle timmer
     }
-    
+
     open func leaveChannel() {
         UIApplication.shared.isIdleTimerDisabled = false
         guard self.agoraKit != nil else { return }
         // leave channel and end chat
         self.agoraKit.leaveChannel()
     }
-    
+
     // MARK: UI
     /**
      Programmatically generated UI, creates the SceneView, and buttons.
@@ -239,7 +242,7 @@ open class ARBroadcaster: UIViewController {
         // Setup sceneview
         let sceneView = ARSCNView() //instantiate scene view
         self.view.insertSubview(sceneView, at: 0)
-        
+
         //add sceneView layout contstraints
         sceneView.translatesAutoresizingMaskIntoConstraints = false
         sceneView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
@@ -248,16 +251,15 @@ open class ARBroadcaster: UIViewController {
         sceneView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
         // set reference to sceneView
         self.sceneView = sceneView
-        
+
         // add branded logo to view
         if let watermarkImage = self.watermarkImage {
             let watermark = UIImageView(image: watermarkImage)
             watermark.contentMode = .scaleAspectFit
-            if let watermarkFrame = self.watermarkFrame {
-                watermark.frame = watermarkFrame
-            } else {
-                watermark.frame = CGRect(x: self.view.frame.maxX-200, y: self.view.frame.maxY-200, width: 150, height: 150)
-            }
+            watermark.frame = self.watermarkFrame ?? CGRect(
+                x: self.view.frame.maxX-200, y: self.view.frame.maxY-200,
+                width: 150, height: 150
+            )
             watermark.alpha = watermarkAlpha
             self.view.insertSubview(watermark, at: 2)
             self.watermark = watermark
@@ -265,12 +267,11 @@ open class ARBroadcaster: UIViewController {
 
         // mic button
         let micBtn = UIButton()
-        if let micBtnFrame = self.micBtnFrame {
-            micBtn.frame = micBtnFrame
-        } else {
-            micBtn.frame = CGRect(x: self.view.frame.midX-37.5, y: self.view.frame.maxY-100, width: 75, height: 75)
-        }
-        
+        micBtn.frame = self.micBtnFrame ?? CGRect(
+            x: self.view.frame.midX-37.5, y: self.view.frame.maxY-100,
+            width: 75, height: 75
+        )
+
         if let micBtnImage = self.micBtnImage {
             micBtn.setImage(micBtnImage, for: .normal)
         } else {
@@ -295,7 +296,7 @@ open class ARBroadcaster: UIViewController {
         backBtn.addTarget(self, action: #selector(popView), for: .touchUpInside)
         self.view.insertSubview(backBtn, at: 2)
     }
-    
+
     open func setARConfiguration() {
         let configuration = ARWorldTrackingConfiguration()
         if let planeDetection = self.planeDetection {
@@ -308,7 +309,7 @@ open class ARBroadcaster: UIViewController {
         self.sceneView.session.run(configuration)
         self.arvkRenderer?.prepare(configuration)
     }
-    
+
     // MARK: Button Events
     /**
      Dismiss the current view
@@ -317,7 +318,7 @@ open class ARBroadcaster: UIViewController {
         leaveChannel()
         self.dismiss(animated: true, completion: nil)
     }
-    
+
     /**
      Local mirophone control for setting mute or enabled states.
      */
@@ -350,5 +351,5 @@ open class ARBroadcaster: UIViewController {
             }
         }
     }
-    
+
 }

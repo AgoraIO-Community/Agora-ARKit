@@ -15,36 +15,40 @@ The `AgoraLobbyVC`implements the `UITextFieldDelegate` to handle user input
 extension AgoraLobbyVC: UITextFieldDelegate {
     // MARK: Textfield Delegates
     open func textFieldDidBeginEditing(_ textField: UITextField) {
-        lprint("TextField did begin editing method called", .Verbose)
+        lprint("TextField did begin editing method called", .verbose)
     }
 
     open func textFieldDidEndEditing(_ textField: UITextField) {
-        lprint("TextField did end editing method called", .Verbose)
+        lprint("TextField did end editing method called", .verbose)
     }
 
     open func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        lprint("TextField should begin editing method called", .Verbose)
-        return true;
+        lprint("TextField should begin editing method called", .verbose)
+        return true
     }
 
     open func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        lprint("TextField should clear method called", .Verbose)
-        return true;
+        lprint("TextField should clear method called", .verbose)
+        return true
     }
 
     open func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        lprint("TextField should snd editing method called", .Verbose)
-        return true;
+        lprint("TextField should snd editing method called", .verbose)
+        return true
     }
 
-    open func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        lprint("While entering the characters this method gets called", .Verbose)
-        return true;
+    open func textField(
+        _ textField: UITextField,
+        shouldChangeCharactersIn range: NSRange,
+        replacementString string: String
+    ) -> Bool {
+        lprint("While entering the characters this method gets called", .verbose)
+        return true
     }
 
     open func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        lprint("TextField should return method called", .Verbose)
-        textField.resignFirstResponder();
-        return true;
+        lprint("TextField should return method called", .verbose)
+        textField.resignFirstResponder()
+        return true
     }
 }

@@ -12,10 +12,10 @@ import UIKit
 The `AgoraLobbyVC` is a `UIViewController` that provides a manged UIView that gives the user the ability to enter a channel name and choose their role as either a Broadcaster or Audience. Based on their selection an `ARBroadcaster` or `ARAudience` _ViewController_ is presented.
  - Note: All class methods can be extended or overwritten.
 */
-open class AgoraLobbyVC: UIViewController  {
+open class AgoraLobbyVC: UIViewController {
 
-    public var debug : Bool = false
-    
+    public var debug: Bool = false
+
     // UI properties
     /**
     The `UIImageView` containing the banner image vsible within the Lobby view
@@ -53,42 +53,43 @@ open class AgoraLobbyVC: UIViewController  {
     The `String` used to set the set the placeholder text value for the `userInput` text field
      */
     public var textFieldPlaceholder: String = "Channel Name"
-    
-    
+
     // MARK: VC Events
     override open func loadView() {
         super.loadView()
-        lprint("LobbyVC - loadView", .Verbose)
+        lprint("LobbyVC - loadView", .verbose)
     }
 
     override open func viewDidLoad() {
         super.viewDidLoad()
-        lprint("LobbyVC - viewDidLoad", .Verbose)
+        lprint("LobbyVC - viewDidLoad", .verbose)
         createUI()
     }
-    
+
     override open func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        lprint("LobbyVC - viewWillAppear", .Verbose)
-        guard (AgoraARKit.agoraAppId != nil) else {
-            fatalError("You msst include an Agora APP ID to use ARKitLive. Get your Agora App ID from: https://console.agora.io")
+        lprint("LobbyVC - viewWillAppear", .verbose)
+        guard AgoraARKit.agoraAppId != nil else {
+            fatalError("""
+                You must include an Agora APP ID to use ARKitLive. Get your Agora App ID from: https://console.agora.io
+            """)
         }
     }
-    
+
     override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        lprint("LobbyVC - viewDidAppear", .Verbose)
+        lprint("LobbyVC - viewDidAppear", .verbose)
     }
-    
+
     override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        lprint("LobbyVC - viewWillDisappear", .Verbose)
+        lprint("LobbyVC - viewWillDisappear", .verbose)
     }
-    
+
     // dismiss the keyboard when user touches the view
     override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        lprint("touches began", .Verbose)
+        lprint("touches began", .verbose)
         self.view.endEditing(true)
     }
 
@@ -107,7 +108,7 @@ open class AgoraLobbyVC: UIViewController  {
             }
             self.view.insertSubview(banner, at: 1)
         }
-        
+
         // text input field
         let textField = UITextField()
         textField.frame = CGRect(x: self.view.center.x-150, y: self.view.center.y-40, width: 300, height: 40)
@@ -117,7 +118,7 @@ open class AgoraLobbyVC: UIViewController  {
         textField.autocorrectionType = UITextAutocorrectionType.no
         textField.keyboardType = UIKeyboardType.default
         textField.returnKeyType = UIReturnKeyType.done
-        textField.clearButtonMode = UITextField.ViewMode.whileEditing;
+        textField.clearButtonMode = UITextField.ViewMode.whileEditing
         textField.contentVerticalAlignment = UIControl.ContentVerticalAlignment.center
         textField.delegate = self
         self.view.addSubview(textField)
@@ -131,7 +132,7 @@ open class AgoraLobbyVC: UIViewController  {
         createBtn.setTitle(broadcastBtnText, for: .normal)
         createBtn.addTarget(self, action: #selector(createSession), for: .touchUpInside)
         self.view.addSubview(createBtn)
-        
+
         // add the join button
         let joinBtn = UIButton()
         joinBtn.frame = CGRect(x: createBtn.frame.minX-125, y: createBtn.frame.minY, width: 100, height: 50)
@@ -141,7 +142,7 @@ open class AgoraLobbyVC: UIViewController  {
         joinBtn.addTarget(self, action: #selector(joinSession), for: .touchUpInside)
         self.view.addSubview(joinBtn)
     }
-    
+
     // MARK: Button Actions
     /**
        The `createSession` method is called whenever the user taps the _Broadcast_ button. Ovveride this method to implement a custom `ARBroadcaster`.
@@ -159,7 +160,7 @@ open class AgoraLobbyVC: UIViewController  {
             }
         }
     }
-    
+
     /**
     The `joinSession` method is called whenever the user taps the _Audience_ button
      */
@@ -178,6 +179,3 @@ open class AgoraLobbyVC: UIViewController  {
     }
 
 }
-
-
-
