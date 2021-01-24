@@ -1,257 +1,495 @@
 {
   "warnings": [
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARAudience.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARAudience.swift",
+      "line": 104,
+      "symbol": "ARAudience.showLogs",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARAudience.swift",
+      "line": 105,
+      "symbol": "ARAudience.debug",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARAudience.swift",
       "line": 141,
       "symbol": "ARAudience.prefersStatusBarHidden",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARAudience.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARAudience.swift",
       "line": 157,
       "symbol": "ARAudience.leaveChannel()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARBroadcaster+ARSCNViewDelegate.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster+ARSCNViewDelegate.swift",
       "line": 13,
       "symbol": "ARBroadcaster.renderer(_:willRenderScene:atTime:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARBroadcaster+ARSCNViewDelegate.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster+ARSCNViewDelegate.swift",
       "line": 17,
       "symbol": "ARBroadcaster.renderer(_:updateAtTime:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARBroadcaster+ARSCNViewDelegate.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster+ARSCNViewDelegate.swift",
       "line": 21,
       "symbol": "ARBroadcaster.renderer(_:didRenderScene:atTime:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARBroadcaster+ARSCNViewDelegate.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster+ARSCNViewDelegate.swift",
       "line": 25,
       "symbol": "ARBroadcaster.renderer(_:didAdd:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARBroadcaster+ARSCNViewDelegate.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster+ARSCNViewDelegate.swift",
       "line": 29,
       "symbol": "ARBroadcaster.renderer(_:didUpdate:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARBroadcaster+ARSCNViewDelegate.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster+ARSCNViewDelegate.swift",
       "line": 33,
       "symbol": "ARBroadcaster.renderer(_:didRemove:for:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARBroadcaster+ARSessionDelegate.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster+ARSessionDelegate.swift",
       "line": 15,
       "symbol": "ARBroadcaster.session(_:didUpdate:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARBroadcaster+ARSessionDelegate.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster+ARSessionDelegate.swift",
       "line": 19,
       "symbol": "ARBroadcaster.session(_:didOutputAudioSampleBuffer:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARBroadcaster+ARSessionDelegate.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster+ARSessionDelegate.swift",
       "line": 24,
       "symbol": "ARBroadcaster.session(_:didFailWithError:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARBroadcaster+ARSessionDelegate.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster+ARSessionDelegate.swift",
       "line": 28,
       "symbol": "ARBroadcaster.sessionWasInterrupted(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARBroadcaster+RenderARDelegate.swift",
-      "line": 16,
-      "symbol": "ARBroadcaster.frame(didRender:with:using:)",
-      "symbol_kind": "source.lang.swift.decl.function.method.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARBroadcaster.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
       "line": 11,
       "symbol": "ARBroadcaster",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARBroadcaster.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
       "line": 13,
       "symbol": "ARBroadcaster",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARBroadcaster.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
       "line": 14,
       "symbol": "ARBroadcaster",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARBroadcaster.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
       "line": 15,
       "symbol": "ARBroadcaster",
       "symbol_kind": "source.lang.swift.decl.class",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARBroadcaster.swift",
-      "line": 17,
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 18,
       "symbol": "ARBroadcaster",
       "symbol_kind": "source.lang.swift.decl.extension",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARBroadcaster.swift",
-      "line": 227,
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 55,
+      "symbol": "ARBroadcaster.channelProfile",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 56,
+      "symbol": "ARBroadcaster.frameRate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 57,
+      "symbol": "ARBroadcaster.videoDimension",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 58,
+      "symbol": "ARBroadcaster.videoBitRate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 59,
+      "symbol": "ARBroadcaster.videoOutputOrientationMode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 60,
+      "symbol": "ARBroadcaster.audioSampleRate",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 61,
+      "symbol": "ARBroadcaster.audioChannelsPerFrame",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 62,
+      "symbol": "ARBroadcaster.defaultToSpeakerPhone",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 63,
+      "symbol": "ARBroadcaster.channelName",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 77,
+      "symbol": "ARBroadcaster.micBtnFrame",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 78,
+      "symbol": "ARBroadcaster.micBtnImage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 79,
+      "symbol": "ARBroadcaster.micBtnTextLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 80,
+      "symbol": "ARBroadcaster.muteBtnImage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 81,
+      "symbol": "ARBroadcaster.muteBtnTextLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 86,
+      "symbol": "ARBroadcaster.backBtnFrame",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 87,
+      "symbol": "ARBroadcaster.backBtnImage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 88,
+      "symbol": "ARBroadcaster.backBtnTextLabel",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 94,
+      "symbol": "ARBroadcaster.watermarkImage",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 95,
+      "symbol": "ARBroadcaster.watermarkFrame",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 96,
+      "symbol": "ARBroadcaster.watermarkAlpha",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 98,
+      "symbol": "ARBroadcaster.viewBackgroundColor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 101,
+      "symbol": "ARBroadcaster.debug",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 102,
+      "symbol": "ARBroadcaster.showLogs",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 230,
       "symbol": "ARBroadcaster.leaveChannel()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/ARBroadcaster.swift",
-      "line": 299,
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARBroadcaster.swift",
+      "line": 300,
       "symbol": "ARBroadcaster.setARConfiguration()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/AgoraLobbyVC+UITextFieldDelegate.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARVideoSource.swift",
+      "line": 17,
+      "symbol": "ARVideoSource.captureType()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARVideoSource.swift",
+      "line": 19,
+      "symbol": "ARVideoSource.contentHint()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARVideoSource.swift",
+      "line": 21,
+      "symbol": "ARVideoSource.consumer",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARVideoSource.swift",
+      "line": 22,
+      "symbol": "ARVideoSource.rotation",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARVideoSource.swift",
+      "line": 24,
+      "symbol": "ARVideoSource.shouldInitialize()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARVideoSource.swift",
+      "line": 26,
+      "symbol": "ARVideoSource.shouldStart()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARVideoSource.swift",
+      "line": 28,
+      "symbol": "ARVideoSource.shouldStop()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARVideoSource.swift",
+      "line": 30,
+      "symbol": "ARVideoSource.shouldDispose()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/ARVideoSource.swift",
+      "line": 32,
+      "symbol": "ARVideoSource.bufferType()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/AgoraLobbyVC+UITextFieldDelegate.swift",
       "line": 17,
       "symbol": "AgoraLobbyVC.textFieldDidBeginEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/AgoraLobbyVC+UITextFieldDelegate.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/AgoraLobbyVC+UITextFieldDelegate.swift",
       "line": 21,
       "symbol": "AgoraLobbyVC.textFieldDidEndEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/AgoraLobbyVC+UITextFieldDelegate.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/AgoraLobbyVC+UITextFieldDelegate.swift",
       "line": 25,
       "symbol": "AgoraLobbyVC.textFieldShouldBeginEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/AgoraLobbyVC+UITextFieldDelegate.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/AgoraLobbyVC+UITextFieldDelegate.swift",
       "line": 30,
       "symbol": "AgoraLobbyVC.textFieldShouldClear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/AgoraLobbyVC+UITextFieldDelegate.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/AgoraLobbyVC+UITextFieldDelegate.swift",
       "line": 35,
       "symbol": "AgoraLobbyVC.textFieldShouldEndEditing(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/AgoraLobbyVC+UITextFieldDelegate.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/AgoraLobbyVC+UITextFieldDelegate.swift",
       "line": 40,
       "symbol": "AgoraLobbyVC.textField(_:shouldChangeCharactersIn:replacementString:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/AgoraLobbyVC+UITextFieldDelegate.swift",
-      "line": 45,
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/AgoraLobbyVC+UITextFieldDelegate.swift",
+      "line": 49,
       "symbol": "AgoraLobbyVC.textFieldShouldReturn(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/AgoraLobbyVC.swift",
-      "line": 59,
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/AgoraLobbyVC.swift",
+      "line": 17,
+      "symbol": "AgoraLobbyVC.debug",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/AgoraLobbyVC.swift",
+      "line": 58,
       "symbol": "AgoraLobbyVC.loadView()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/AgoraLobbyVC.swift",
-      "line": 64,
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/AgoraLobbyVC.swift",
+      "line": 63,
       "symbol": "AgoraLobbyVC.viewDidLoad()",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/AgoraLobbyVC.swift",
-      "line": 70,
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/AgoraLobbyVC.swift",
+      "line": 69,
       "symbol": "AgoraLobbyVC.viewWillAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/AgoraLobbyVC.swift",
-      "line": 78,
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/AgoraLobbyVC.swift",
+      "line": 79,
       "symbol": "AgoraLobbyVC.viewDidAppear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/AgoraLobbyVC.swift",
-      "line": 83,
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/AgoraLobbyVC.swift",
+      "line": 84,
       "symbol": "AgoraLobbyVC.viewWillDisappear(_:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/AgoraLobbyVC.swift",
-      "line": 89,
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/AgoraLobbyVC.swift",
+      "line": 90,
       "symbol": "AgoraLobbyVC.touchesBegan(_:with:)",
       "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/Logger.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/Logger.swift",
       "line": 13,
-      "symbol": "LogLevel.None",
+      "symbol": "LogLevel.none",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/Logger.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/Logger.swift",
       "line": 14,
-      "symbol": "LogLevel.Normal",
+      "symbol": "LogLevel.normal",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
-      "file": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit/AgoraARKit/Logger.swift",
+      "file": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit/AgoraARKit/Logger.swift",
       "line": 15,
-      "symbol": "LogLevel.Verbose",
+      "symbol": "LogLevel.verbose",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     }
   ],
-  "source_directory": "/Users/hermesfrangoudis/Agora/repos/AgoraARKit"
+  "source_directory": "/Users/maxcobb/Documents/Agora/AgoraIO-Community/Agora-ARKit"
 }

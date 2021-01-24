@@ -8,13 +8,21 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Class/ARBroadcaster" class="dashAnchor"></a>
     <a title="ARBroadcaster Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AgoraARKit Docs</a> (68% documented)</p>
+        <p><a href="../index.html">AgoraARKit 1.0.7 Docs</a> (61% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -37,7 +45,10 @@
                 <a href="../Classes/ARBroadcaster.html">ARBroadcaster</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes.html#/s:10AgoraARKitAAC">AgoraARKit</a>
+                <a href="../Classes/ARVideoSource.html">ARVideoSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AgoraARKit.html">AgoraARKit</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AgoraLobbyVC.html">AgoraLobbyVC</a>
@@ -76,6 +87,7 @@
             <h1>ARBroadcaster</h1>
               <div class="declaration">
                 <div class="language">
+                  
                   <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">ARBroadcaster</span> <span class="p">:</span> <span class="kt">UIViewController</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">ARBroadcaster</span><span class="p">:</span> <span class="kt">ARSCNViewDelegate</span></code></pre>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">ARBroadcaster</span><span class="p">:</span> <span class="kt">ARSessionDelegate</span></code></pre>
@@ -99,6 +111,62 @@
                 </div>
               </div>
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC9sceneViewSo9ARSCNViewCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/sceneView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC9sceneViewSo9ARSCNViewCSgvp">sceneView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A reference to the <code>ARSCNView</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">sceneView</span><span class="p">:</span> <span class="kt">ARSCNView</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC14planeDetectionSo07ARPlaneE0VSgvp"></a>
+                    <a name="//apple_ref/swift/Property/planeDetection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC14planeDetectionSo07ARPlaneE0VSgvp">planeDetection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code>ARWorldTrackingConfiguration</code>&lsquo;s setting for plane detection</p>
+
+<p>Defaults to <code>nil</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">planeDetection</span><span class="p">:</span> <span class="kt">ARWorldTrackingConfiguration</span><span class="o">.</span><span class="kt">PlaneDetection</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -238,6 +306,734 @@
             </div>
             <div class="task-group">
               <div class="task-name-container">
+                <a name="/Agora%20Properties"></a>
+                <a name="//apple_ref/swift/Section/Agora Properties" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Agora%20Properties"></a>
+                  <h3 class="section-name"><p>Agora Properties</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC14channelProfileSo0a7ChannelE0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/channelProfile" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC14channelProfileSo0a7ChannelE0Vvp">channelProfile</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">channelProfile</span><span class="p">:</span> <span class="kt">AgoraChannelProfile</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC9frameRateSo0a10VideoFrameE0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/frameRate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC9frameRateSo0a10VideoFrameE0Vvp">frameRate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">frameRate</span><span class="p">:</span> <span class="kt">AgoraVideoFrameRate</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC14videoDimensionSo6CGSizeVvp"></a>
+                    <a name="//apple_ref/swift/Property/videoDimension" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC14videoDimensionSo6CGSizeVvp">videoDimension</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">videoDimension</span><span class="p">:</span> <span class="kt">CGSize</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC12videoBitRateSivp"></a>
+                    <a name="//apple_ref/swift/Property/videoBitRate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC12videoBitRateSivp">videoBitRate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">videoBitRate</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC26videoOutputOrientationModeSo0a5VideoefG0Vvp"></a>
+                    <a name="//apple_ref/swift/Property/videoOutputOrientationMode" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC26videoOutputOrientationModeSo0a5VideoefG0Vvp">videoOutputOrientationMode</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">videoOutputOrientationMode</span><span class="p">:</span> <span class="kt">AgoraVideoOutputOrientationMode</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC15audioSampleRateSuvp"></a>
+                    <a name="//apple_ref/swift/Property/audioSampleRate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC15audioSampleRateSuvp">audioSampleRate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">audioSampleRate</span><span class="p">:</span> <span class="kt">UInt</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC21audioChannelsPerFrameSuvp"></a>
+                    <a name="//apple_ref/swift/Property/audioChannelsPerFrame" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC21audioChannelsPerFrameSuvp">audioChannelsPerFrame</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">audioChannelsPerFrame</span><span class="p">:</span> <span class="kt">UInt</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC21defaultToSpeakerPhoneSbvp"></a>
+                    <a name="//apple_ref/swift/Property/defaultToSpeakerPhone" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC21defaultToSpeakerPhoneSbvp">defaultToSpeakerPhone</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">defaultToSpeakerPhone</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC11channelNameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/channelName" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC11channelNameSSSgvp">channelName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">channelName</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/UI%20properties"></a>
+                <a name="//apple_ref/swift/Section/UI properties" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/UI%20properties"></a>
+                  <h3 class="section-name"><p>UI properties</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC6micBtnSo8UIButtonCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/micBtn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC6micBtnSo8UIButtonCSgvp">micBtn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A <code>UIButton</code> that toggles the microphone</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">micBtn</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC11micBtnFrameSo6CGRectVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/micBtnFrame" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC11micBtnFrameSo6CGRectVSgvp">micBtnFrame</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">micBtnFrame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC11micBtnImageSo7UIImageCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/micBtnImage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC11micBtnImageSo7UIImageCSgvp">micBtnImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">micBtnImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC15micBtnTextLabelSSvp"></a>
+                    <a name="//apple_ref/swift/Property/micBtnTextLabel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC15micBtnTextLabelSSvp">micBtnTextLabel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">micBtnTextLabel</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC12muteBtnImageSo7UIImageCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/muteBtnImage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC12muteBtnImageSo7UIImageCSgvp">muteBtnImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">muteBtnImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC16muteBtnTextLabelSSvp"></a>
+                    <a name="//apple_ref/swift/Property/muteBtnTextLabel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC16muteBtnTextLabelSSvp">muteBtnTextLabel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">muteBtnTextLabel</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC7backBtnSo8UIButtonCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/backBtn" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC7backBtnSo8UIButtonCSgvp">backBtn</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A <code>UIButton</code> that dismisses the view controller when tapped</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">backBtn</span><span class="p">:</span> <span class="kt">UIButton</span><span class="o">!</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC12backBtnFrameSo6CGRectVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/backBtnFrame" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC12backBtnFrameSo6CGRectVSgvp">backBtnFrame</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">backBtnFrame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC12backBtnImageSo7UIImageCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/backBtnImage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC12backBtnImageSo7UIImageCSgvp">backBtnImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">backBtnImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC16backBtnTextLabelSSvp"></a>
+                    <a name="//apple_ref/swift/Property/backBtnTextLabel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC16backBtnTextLabelSSvp">backBtnTextLabel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">backBtnTextLabel</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC9watermarkSo11UIImageViewCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/watermark" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC9watermarkSo11UIImageViewCSgvp">watermark</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An optional <code>UIImageView</code> that displays a watermark over part of the video.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">watermark</span><span class="p">:</span> <span class="kt">UIImageView</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC14watermarkImageSo7UIImageCSgvp"></a>
+                    <a name="//apple_ref/swift/Property/watermarkImage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC14watermarkImageSo7UIImageCSgvp">watermarkImage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">watermarkImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC14watermarkFrameSo6CGRectVSgvp"></a>
+                    <a name="//apple_ref/swift/Property/watermarkFrame" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC14watermarkFrameSo6CGRectVSgvp">watermarkFrame</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">watermarkFrame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC14watermarkAlpha12CoreGraphics7CGFloatVvp"></a>
+                    <a name="//apple_ref/swift/Property/watermarkAlpha" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC14watermarkAlpha12CoreGraphics7CGFloatVvp">watermarkAlpha</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">watermarkAlpha</span><span class="p">:</span> <span class="kt">CGFloat</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC19viewBackgroundColorSo7UIColorCvp"></a>
+                    <a name="//apple_ref/swift/Property/viewBackgroundColor" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC19viewBackgroundColorSo7UIColorCvp">viewBackgroundColor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">viewBackgroundColor</span><span class="p">:</span> <span class="kt">UIColor</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC5debugSbvp"></a>
+                    <a name="//apple_ref/swift/Property/debug" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC5debugSbvp">debug</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">debug</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10AgoraARKit13ARBroadcasterC8showLogsSbvp"></a>
+                    <a name="//apple_ref/swift/Property/showLogs" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC8showLogsSbvp">showLogs</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">showLogs</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
                 <a name="/VC%20Events"></a>
                 <a name="//apple_ref/swift/Section/VC Events" class="dashAnchor"></a>
                 <div class="section-name-container">
@@ -279,7 +1075,7 @@
                     <code>
                     <a name="/c:@M@AgoraARKit@objc(cs)ARBroadcaster(im)viewWillAppear:"></a>
                     <a name="//apple_ref/swift/Method/viewWillAppear(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@AgoraARKit@objc(cs)ARBroadcaster(im)viewWillAppear:">viewWillAppear(_:)</a>
+                    <a class="token" href="#/c:@M@AgoraARKit@objc(cs)ARBroadcaster(im)viewWillAppear:">viewWillAppear(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -306,7 +1102,7 @@
                     <code>
                     <a name="/c:@M@AgoraARKit@objc(cs)ARBroadcaster(im)viewDidAppear:"></a>
                     <a name="//apple_ref/swift/Method/viewDidAppear(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@AgoraARKit@objc(cs)ARBroadcaster(im)viewDidAppear:">viewDidAppear(_:)</a>
+                    <a class="token" href="#/c:@M@AgoraARKit@objc(cs)ARBroadcaster(im)viewDidAppear:">viewDidAppear(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -333,7 +1129,7 @@
                     <code>
                     <a name="/c:@M@AgoraARKit@objc(cs)ARBroadcaster(im)viewWillDisappear:"></a>
                     <a name="//apple_ref/swift/Method/viewWillDisappear(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@AgoraARKit@objc(cs)ARBroadcaster(im)viewWillDisappear:">viewWillDisappear(_:)</a>
+                    <a class="token" href="#/c:@M@AgoraARKit@objc(cs)ARBroadcaster(im)viewWillDisappear:">viewWillDisappear(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -360,7 +1156,7 @@
                     <code>
                     <a name="/c:@M@AgoraARKit@objc(cs)ARBroadcaster(im)viewDidDisappear:"></a>
                     <a name="//apple_ref/swift/Method/viewDidDisappear(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@AgoraARKit@objc(cs)ARBroadcaster(im)viewDidDisappear:">viewDidDisappear(_:)</a>
+                    <a class="token" href="#/c:@M@AgoraARKit@objc(cs)ARBroadcaster(im)viewDidDisappear:">viewDidDisappear(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -574,7 +1370,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)renderer:willRenderScene:atTime:"></a>
                     <a name="//apple_ref/swift/Method/renderer(_:willRenderScene:atTime:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)renderer:willRenderScene:atTime:">renderer(_:willRenderScene:atTime:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)renderer:willRenderScene:atTime:">renderer(_:<wbr>willRenderScene:<wbr>atTime:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -601,7 +1397,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)renderer:updateAtTime:"></a>
                     <a name="//apple_ref/swift/Method/renderer(_:updateAtTime:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)renderer:updateAtTime:">renderer(_:updateAtTime:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)renderer:updateAtTime:">renderer(_:<wbr>updateAtTime:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -628,7 +1424,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)renderer:didRenderScene:atTime:"></a>
                     <a name="//apple_ref/swift/Method/renderer(_:didRenderScene:atTime:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)renderer:didRenderScene:atTime:">renderer(_:didRenderScene:atTime:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)renderer:didRenderScene:atTime:">renderer(_:<wbr>didRenderScene:<wbr>atTime:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -655,7 +1451,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)renderer:didAddNode:forAnchor:"></a>
                     <a name="//apple_ref/swift/Method/renderer(_:didAdd:for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)renderer:didAddNode:forAnchor:">renderer(_:didAdd:for:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)renderer:didAddNode:forAnchor:">renderer(_:<wbr>didAdd:<wbr>for:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -682,7 +1478,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)renderer:didUpdateNode:forAnchor:"></a>
                     <a name="//apple_ref/swift/Method/renderer(_:didUpdate:for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)renderer:didUpdateNode:forAnchor:">renderer(_:didUpdate:for:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)renderer:didUpdateNode:forAnchor:">renderer(_:<wbr>didUpdate:<wbr>for:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -709,7 +1505,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)renderer:didRemoveNode:forAnchor:"></a>
                     <a name="//apple_ref/swift/Method/renderer(_:didRemove:for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)renderer:didRemoveNode:forAnchor:">renderer(_:didRemove:for:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)renderer:didRemoveNode:forAnchor:">renderer(_:<wbr>didRemove:<wbr>for:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -736,7 +1532,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)session:didUpdateFrame:"></a>
                     <a name="//apple_ref/swift/Method/session(_:didUpdate:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)session:didUpdateFrame:">session(_:didUpdate:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)session:didUpdateFrame:">session(_:<wbr>didUpdate:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -763,7 +1559,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)session:didOutputAudioSampleBuffer:"></a>
                     <a name="//apple_ref/swift/Method/session(_:didOutputAudioSampleBuffer:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)session:didOutputAudioSampleBuffer:">session(_:didOutputAudioSampleBuffer:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)session:didOutputAudioSampleBuffer:">session(_:<wbr>didOutputAudioSampleBuffer:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -790,7 +1586,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)session:didFailWithError:"></a>
                     <a name="//apple_ref/swift/Method/session(_:didFailWithError:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)session:didFailWithError:">session(_:didFailWithError:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)session:didFailWithError:">session(_:<wbr>didFailWithError:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -817,7 +1613,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)sessionWasInterrupted:"></a>
                     <a name="//apple_ref/swift/Method/sessionWasInterrupted(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)sessionWasInterrupted:">sessionWasInterrupted(_:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)sessionWasInterrupted:">sessionWasInterrupted(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -857,7 +1653,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didOccurWarning:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:didOccurWarning:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didOccurWarning:">rtcEngine(_:didOccurWarning:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didOccurWarning:">rtcEngine(_:<wbr>didOccurWarning:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -921,7 +1717,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didOccurError:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:didOccurError:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didOccurError:">rtcEngine(_:didOccurError:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didOccurError:">rtcEngine(_:<wbr>didOccurError:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -985,7 +1781,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didApiCallExecute:api:result:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:didApiCallExecute:api:result:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didApiCallExecute:api:result:">rtcEngine(_:didApiCallExecute:api:result:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didApiCallExecute:api:result:">rtcEngine(_:<wbr>didApiCallExecute:<wbr>api:<wbr>result:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1067,7 +1863,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didJoinChannel:withUid:elapsed:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:didJoinChannel:withUid:elapsed:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didJoinChannel:withUid:elapsed:">rtcEngine(_:didJoinChannel:withUid:elapsed:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didJoinChannel:withUid:elapsed:">rtcEngine(_:<wbr>didJoinChannel:<wbr>withUid:<wbr>elapsed:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1151,7 +1947,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didRejoinChannel:withUid:elapsed:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:didRejoinChannel:withUid:elapsed:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didRejoinChannel:withUid:elapsed:">rtcEngine(_:didRejoinChannel:withUid:elapsed:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didRejoinChannel:withUid:elapsed:">rtcEngine(_:<wbr>didRejoinChannel:<wbr>withUid:<wbr>elapsed:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1235,7 +2031,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didLeaveChannelWithStats:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:didLeaveChannelWith:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didLeaveChannelWithStats:">rtcEngine(_:didLeaveChannelWith:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didLeaveChannelWithStats:">rtcEngine(_:<wbr>didLeaveChannelWith:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1297,7 +2093,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didRegisteredLocalUser:withUid:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:didRegisteredLocalUser:withUid:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didRegisteredLocalUser:withUid:">rtcEngine(_:didRegisteredLocalUser:withUid:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didRegisteredLocalUser:withUid:">rtcEngine(_:<wbr>didRegisteredLocalUser:<wbr>withUid:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1369,7 +2165,7 @@
                     <code>
                     <a name="/s:10AgoraARKit13ARBroadcasterC10rtceEngine_10didUpdated7withUidySo0a3RtcE3KitC_So0A8UserInfoCSutF"></a>
                     <a name="//apple_ref/swift/Method/rtceEngine(_:didUpdated:withUid:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC10rtceEngine_10didUpdated7withUidySo0a3RtcE3KitC_So0A8UserInfoCSutF">rtceEngine(_:didUpdated:withUid:)</a>
+                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC10rtceEngine_10didUpdated7withUidySo0a3RtcE3KitC_So0A8UserInfoCSutF">rtceEngine(_:<wbr>didUpdated:<wbr>withUid:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1441,7 +2237,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didClientRoleChanged:newRole:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:didClientRoleChanged:newRole:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didClientRoleChanged:newRole:">rtcEngine(_:didClientRoleChanged:newRole:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didClientRoleChanged:newRole:">rtcEngine(_:<wbr>didClientRoleChanged:<wbr>newRole:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1513,7 +2309,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didJoinedOfUid:elapsed:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:didJoinedOfUid:elapsed:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didJoinedOfUid:elapsed:">rtcEngine(_:didJoinedOfUid:elapsed:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didJoinedOfUid:elapsed:">rtcEngine(_:<wbr>didJoinedOfUid:<wbr>elapsed:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1608,7 +2404,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didOfflineOfUid:reason:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:didOfflineOfUid:reason:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didOfflineOfUid:reason:">rtcEngine(_:didOfflineOfUid:reason:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didOfflineOfUid:reason:">rtcEngine(_:<wbr>didOfflineOfUid:<wbr>reason:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1685,7 +2481,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:connectionChangedToState:reason:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:connectionChangedTo:reason:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:connectionChangedToState:reason:">rtcEngine(_:connectionChangedTo:reason:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:connectionChangedToState:reason:">rtcEngine(_:<wbr>connectionChangedTo:<wbr>reason:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1757,7 +2553,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:networkTypeChangedToType:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:networkTypeChangedTo:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:networkTypeChangedToType:">rtcEngine(_:networkTypeChangedTo:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:networkTypeChangedToType:">rtcEngine(_:<wbr>networkTypeChangedTo:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1817,7 +2613,7 @@
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngineConnectionDidLost:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngineConnectionDidLost(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngineConnectionDidLost:">rtcEngineConnectionDidLost(_:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngineConnectionDidLost:">rtcEngineConnectionDidLost(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1873,7 +2669,7 @@ If the SDK fails to rejoin the channel 20 minutes after being disconnected from 
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:tokenPrivilegeWillExpire:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:tokenPrivilegeWillExpire:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:tokenPrivilegeWillExpire:">rtcEngine(_:tokenPrivilegeWillExpire:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:tokenPrivilegeWillExpire:">rtcEngine(_:<wbr>tokenPrivilegeWillExpire:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1933,7 +2729,7 @@ If the SDK fails to rejoin the channel 20 minutes after being disconnected from 
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngineRequestToken:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngineRequestToken(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngineRequestToken:">rtcEngineRequestToken(_:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngineRequestToken:">rtcEngineRequestToken(_:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1996,7 +2792,7 @@ If the SDK fails to rejoin the channel 20 minutes after being disconnected from 
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:reportAudioVolumeIndicationOfSpeakers:totalVolume:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:reportAudioVolumeIndicationOfSpeakers:totalVolume:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:reportAudioVolumeIndicationOfSpeakers:totalVolume:">rtcEngine(_:reportAudioVolumeIndicationOfSpeakers:totalVolume:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:reportAudioVolumeIndicationOfSpeakers:totalVolume:">rtcEngine(_:<wbr>reportAudioVolumeIndicationOfSpeakers:<wbr>totalVolume:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2078,7 +2874,7 @@ If the SDK fails to rejoin the channel 20 minutes after being disconnected from 
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didAudioMuted:byUid:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:didAudioMuted:byUid:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didAudioMuted:byUid:">rtcEngine(_:didAudioMuted:byUid:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didAudioMuted:byUid:">rtcEngine(_:<wbr>didAudioMuted:<wbr>byUid:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2155,7 +2951,7 @@ If the SDK fails to rejoin the channel 20 minutes after being disconnected from 
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:activeSpeaker:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:activeSpeaker:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:activeSpeaker:">rtcEngine(_:activeSpeaker:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:activeSpeaker:">rtcEngine(_:<wbr>activeSpeaker:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2223,7 +3019,7 @@ If the SDK fails to rejoin the channel 20 minutes after being disconnected from 
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:firstLocalAudioFrame:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:firstLocalAudioFrame:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:firstLocalAudioFrame:">rtcEngine(_:firstLocalAudioFrame:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:firstLocalAudioFrame:">rtcEngine(_:<wbr>firstLocalAudioFrame:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2281,7 +3077,7 @@ If the SDK fails to rejoin the channel 20 minutes after being disconnected from 
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:firstRemoteAudioFrameOfUid:elapsed:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:firstRemoteAudioFrameOfUid:elapsed:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:firstRemoteAudioFrameOfUid:elapsed:">rtcEngine(_:firstRemoteAudioFrameOfUid:elapsed:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:firstRemoteAudioFrameOfUid:elapsed:">rtcEngine(_:<wbr>firstRemoteAudioFrameOfUid:<wbr>elapsed:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2362,7 +3158,7 @@ If the SDK fails to rejoin the channel 20 minutes after being disconnected from 
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didVideoMuted:byUid:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:didVideoMuted:byUid:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didVideoMuted:byUid:">rtcEngine(_:didVideoMuted:byUid:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didVideoMuted:byUid:">rtcEngine(_:<wbr>didVideoMuted:<wbr>byUid:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2446,7 +3242,7 @@ If the SDK fails to rejoin the channel 20 minutes after being disconnected from 
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:remoteVideoStateChangedOfUid:state:reason:elapsed:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:remoteVideoStateChangedOfUid:state:reason:elapsed:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:remoteVideoStateChangedOfUid:state:reason:elapsed:">rtcEngine(_:remoteVideoStateChangedOfUid:state:reason:elapsed:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:remoteVideoStateChangedOfUid:state:reason:elapsed:">rtcEngine(_:<wbr>remoteVideoStateChangedOfUid:<wbr>state:<wbr>reason:<wbr>elapsed:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2553,7 +3349,7 @@ If the SDK fails to rejoin the channel 20 minutes after being disconnected from 
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:receiveStreamMessageFromUid:streamId:data:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:receiveStreamMessageFromUid:streamId:data:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:receiveStreamMessageFromUid:streamId:data:">rtcEngine(_:receiveStreamMessageFromUid:streamId:data:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:receiveStreamMessageFromUid:streamId:data:">rtcEngine(_:<wbr>receiveStreamMessageFromUid:<wbr>streamId:<wbr>data:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2637,7 +3433,7 @@ If the SDK fails to rejoin the channel 20 minutes after being disconnected from 
                     <code>
                     <a name="/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didOccurStreamMessageErrorFromUid:streamId:error:missed:cached:"></a>
                     <a name="//apple_ref/swift/Method/rtcEngine(_:didOccurStreamMessageErrorFromUid:streamId:error:missed:cached:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didOccurStreamMessageErrorFromUid:streamId:error:missed:cached:">rtcEngine(_:didOccurStreamMessageErrorFromUid:streamId:error:missed:cached:)</a>
+                    <a class="token" href="#/c:@CM@AgoraARKit@objc(cs)ARBroadcaster(im)rtcEngine:didOccurStreamMessageErrorFromUid:streamId:error:missed:cached:">rtcEngine(_:<wbr>didOccurStreamMessageErrorFromUid:<wbr>streamId:<wbr>error:<wbr>missed:<wbr>cached:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2756,9 +3552,9 @@ If the SDK fails to rejoin the channel 20 minutes after being disconnected from 
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10AgoraARKit13ARBroadcasterC5frame9didRender4with5usingySo11CVBufferRefa_So6CMTimeaAItF"></a>
+                    <a name="/c:@M@ARVideoKit@objc(pl)RenderARDelegate(im)frameWithDidRender:with:using:"></a>
                     <a name="//apple_ref/swift/Method/frame(didRender:with:using:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10AgoraARKit13ARBroadcasterC5frame9didRender4with5usingySo11CVBufferRefa_So6CMTimeaAItF">frame(didRender:with:using:)</a>
+                    <a class="token" href="#/c:@M@ARVideoKit@objc(pl)RenderARDelegate(im)frameWithDidRender:with:using:">frame(didRender:<wbr>with:<wbr>using:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -2766,8 +3562,7 @@ If the SDK fails to rejoin the channel 20 minutes after being disconnected from 
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2785,8 +3580,8 @@ If the SDK fails to rejoin the channel 20 minutes after being disconnected from 
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="http://github.com/digitallysavvy/AgoraARKit" target="_blank" rel="external">Hermes</a>. All rights reserved. (Last updated: 2020-02-19)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2021 <a class="link" href="https://github.com/AgoraIO-Community/Agora-ARKit" target="_blank" rel="external">Hermes</a>. All rights reserved. (Last updated: 2021-01-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>
