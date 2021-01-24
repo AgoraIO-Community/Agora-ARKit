@@ -23,6 +23,6 @@ Pod::Spec.new do |spec|
                               'CoreGraphics',
                               'Foundation'
                             ]
-  spec.dependency 'AgoraRtcEngine_iOS' 
+  spec.dependency 'AgoraRtcEngine_iOS', '<= 3.2.1'
   spec.dependency 'ARVideoKit','~> 1.51'                 
 end
