@@ -14,7 +14,7 @@ The `ARAudience` is a `UIViewController` that implements all the needed methods 
  - Note: All class methods can be extended or overwritten.
 */
 open class ARAudience: UIViewController {
-    
+
     // MARK: Agora properties
     /**
     A reference to the `AgoraRtcEngineKit`
@@ -47,17 +47,17 @@ open class ARAudience: UIViewController {
     A reference to the host user.
      */
     public var remoteUser: UInt?                       // remote user id
-    
+
     // MARK: UI properties
     /**
     A `UIView` representing the video stream of the host user
      */
     public var remoteVideoView: UIView!                // video stream from remote user
-    
+
     /**
     A Dictionary of `UIView`s representing the video streams of the host users
      */
-    public var remoteVideoViews: [UInt:UIView] = [:]    // Dictionary of remote views
+    public var remoteVideoViews: [UInt: UIView] = [:]    // Dictionary of remote views
     /**
     The `remoteViewBackgroundColor` is the background color for the UIView until the remote video stream is received.
      
@@ -99,11 +99,11 @@ open class ARAudience: UIViewController {
     A `CGFloat` that represents the transparency of the `watermark`
      */
     public var watermarkAlpha: CGFloat = 0.25
-    
+
     // Debugging
     public var showLogs: Bool = true
     public var debug: Bool = true
-    
+
     // MARK: VC Events
 
     /**
@@ -111,7 +111,7 @@ open class ARAudience: UIViewController {
      */
     override open func viewDidLoad() {
         super.viewDidLoad()
-        lprint("AudienceVC - viewDidLoad", .Verbose)
+        lprint("AudienceVC - viewDidLoad", .verbose)
         createUI()
         guard let agoraAppID = AgoraARKit.agoraAppId else { return }
         // Add Agora setup
@@ -122,13 +122,13 @@ open class ARAudience: UIViewController {
         }
         self.agoraKit = agoraKit
     }
-    
+
     /**
     AgoraARKit joins the Agora channel within the `viewDidAppear`
     */
     override open func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        lprint("AudienceVC - viewDidAppear", .Verbose)
+        lprint("AudienceVC - viewDidAppear", .verbose)
         // do something when the view has appeared
         if AgoraARKit.agoraAppId == nil {
             popView()
@@ -141,7 +141,7 @@ open class ARAudience: UIViewController {
     override open var prefersStatusBarHidden: Bool {
        return true
     }
-    
+
     // MARK: Agora Interface
     /**
     Conencts to the Agora channel, and sets the default audio route to speakerphone
@@ -150,24 +150,24 @@ open class ARAudience: UIViewController {
         // Set audio route to speaker
         self.agoraKit.setDefaultAudioRouteToSpeakerphone(defaultToSpeakerPhone)
         // Join the channel
-        self.agoraKit.joinChannel(byToken: AgoraARKit.agoraToken, channelId: self.channelName, info: nil, uid: 0) 
+        self.agoraKit.joinChannel(byToken: AgoraARKit.agoraToken, channelId: self.channelName, info: nil, uid: 0)
         UIApplication.shared.isIdleTimerDisabled = true     // Disable idle timmer
     }
-    
+
     open func leaveChannel() {
-        lprint("leaveChannel", .Verbose)
+        lprint("leaveChannel", .verbose)
         UIApplication.shared.isIdleTimerDisabled = false
         guard self.agoraKit != nil else { return }
         // leave channel and end chat
         self.agoraKit.leaveChannel(nil)
     }
-    
+
     // MARK: UI
     /**
      Programmatically generated UI, creates the view, and buttons.
      */
     open func createUI() {
-        lprint("createUI", .Verbose)
+        lprint("createUI", .verbose)
         // add remote video view
         let remoteView = UIView()
         remoteView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
@@ -175,21 +175,21 @@ open class ARAudience: UIViewController {
         remoteView.contentMode = .scaleAspectFit
         self.view.insertSubview(remoteView, at: 1)
         self.remoteVideoView = remoteView
-        
+
         // add branded logo to view
         if let watermarkImage = self.watermarkImage {
             let watermark = UIImageView(image: watermarkImage)
             watermark.contentMode = .scaleAspectFit
-            if let watermarkFrame = self.watermarkFrame {
-                watermark.frame = watermarkFrame
-            } else {
-                watermark.frame = CGRect(x: self.view.frame.maxX-100, y: self.view.frame.maxY-100, width: 75, height: 75)
-            }
+
+            watermark.frame = self.watermarkFrame ?? CGRect(
+                x: self.view.frame.maxX-100, y: self.view.frame.maxY-100,
+                width: 75, height: 75
+            )
             watermark.alpha = watermarkAlpha
             self.view.insertSubview(watermark, at: 2)
             self.watermark = watermark
         }
-        
+
         //  back button
         let backBtn = UIButton()
         if let backBtnFrame = self.backBtnFrame {
@@ -205,7 +205,7 @@ open class ARAudience: UIViewController {
         backBtn.addTarget(self, action: #selector(popView), for: .touchUpInside)
         self.view.insertSubview(backBtn, at: 2)
     }
-    
+
     // MARK: Button Events
     /**
      Dismiss the current view

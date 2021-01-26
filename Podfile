@@ -6,7 +6,7 @@ target 'AgoraARKit' do
   use_frameworks!
 
   # Pods for AgoraARKit
-  pod 'AgoraRtcEngine_iOS'
+  pod 'AgoraRtcEngine_iOS', '<= 3.2.1'
   pod 'ARVideoKit','~> 1.51' # record ARKit session
 
   target 'AgoraARKitTests' do

@@ -5,6 +5,7 @@
 //  Created by Hermes Frangoudis on 1/14/20.
 //  Copyright © 2020 Agora.io. All rights reserved.
 //
+// swiftlint:disable line_length file_length
 
 import AgoraRtcKit
 
@@ -30,9 +31,9 @@ extension ARAudience: AgoraRtcEngineDelegate {
      See [AgoraWarningCode](https://docs.agora.io/en/Video/API%20Reference/oc/Constants/AgoraWarningCode.html).
     */
     open func rtcEngine(_ engine: AgoraRtcEngineKit, didOccurWarning warningCode: AgoraWarningCode) {
-            lprint("warning: \(warningCode.rawValue)", .Verbose)
+            lprint("warning: \(warningCode.rawValue)", .verbose)
     }
-    
+
     /**
     Reports an error during the Agora SDK at runtime.
     - Parameters:
@@ -46,9 +47,9 @@ extension ARAudience: AgoraRtcEngineDelegate {
      See [AgoraErrorCode](https://docs.agora.io/en/Video/API%20Reference/oc/Constants/AgoraErrorCode.html).
     */
     open func rtcEngine(_ engine: AgoraRtcEngineKit, didOccurError errorCode: AgoraErrorCode) {
-           lprint("error: \(errorCode.rawValue)", .Verbose)
+           lprint("error: \(errorCode.rawValue)", .verbose)
     }
-    
+
     /**
     Occurs when a method is executed by the SDK.
     - Parameters:
@@ -58,9 +59,9 @@ extension ARAudience: AgoraRtcEngineDelegate {
         - result: The result of the method call.
     */
     open func rtcEngine(_ engine: AgoraRtcEngineKit, didApiCallExecute error: NSInteger, api: String, result: String) {
-        lprint("didApiCallExecute: \(api) with result: \(result) and code: \(error)", .Verbose)
+        lprint("didApiCallExecute: \(api) with result: \(result) and code: \(error)", .verbose)
     }
-    
+
     /**
     Occurs when the local user joins a specified channel.
     - Parameters:
@@ -72,9 +73,9 @@ extension ARAudience: AgoraRtcEngineDelegate {
      Same as joinSuccessBlock in the joinChannelByToken method.
      */
     open func rtcEngine(_ engine: AgoraRtcEngineKit, didJoinChannel channel: String, withUid uid: UInt, elapsed: Int) {
-        lprint("local user did join channel with uid:\(uid)", .Verbose)
+        lprint("local user did join channel with uid:\(uid)", .verbose)
     }
-    
+
     /**
     Occurs when the local user rejoins a channel.
     - Parameters:
@@ -86,7 +87,7 @@ extension ARAudience: AgoraRtcEngineDelegate {
      If the client loses connection with the server because of network problems, the SDK automatically attempts to reconnect and then triggers this callback upon reconnection, indicating that the user rejoins the channel with the assigned channel ID and user ID.
     */
     open func rtcEngine(_ engine: AgoraRtcEngineKit, didRejoinChannel channel: String, withUid uid: UInt, elapsed: Int) {
-        lprint("local user did rejoin channel with uid:\(uid)", .Verbose)
+        lprint("local user did rejoin channel with uid:\(uid)", .verbose)
     }
     /**
     Occurs when the local user leaves a channel.
@@ -99,8 +100,8 @@ extension ARAudience: AgoraRtcEngineDelegate {
      With this callback, the app retrieves information, such as the call duration and the statistics of the received/transmitted data reported by the `audioQualityOfUid` callback.
     */
     open func rtcEngine(_ engine: AgoraRtcEngineKit, didLeaveChannelWith stats: AgoraChannelStats) {
-        lprint("local user did leave channel with stats: \n", .Verbose)
-        lprint(String(describing: stats), .Verbose)
+        lprint("local user did leave channel with stats: \n", .verbose)
+        lprint(String(describing: stats), .verbose)
     }
     /**
     Occurs when the local user successfully registers a user account by calling the registerLocalUserAccount or joinChannelByUserAccount method.
@@ -112,7 +113,7 @@ extension ARAudience: AgoraRtcEngineDelegate {
      This callback reports the user ID and user account of the local user.
     */
     open func rtcEngine(_ engine: AgoraRtcEngineKit, didRegisteredLocalUser userAccount: String, withUid uid: UInt) {
-        lprint("didRegisteredLocalUser userAccount: \(userAccount) for local user: \(uid)", .Verbose)
+        lprint("didRegisteredLocalUser userAccount: \(userAccount) for local user: \(uid)", .verbose)
     }
     /**
     Occurs when the SDK gets the user ID and user account of the remote user.
@@ -124,8 +125,8 @@ extension ARAudience: AgoraRtcEngineDelegate {
      After a remote user joins the channel, the SDK gets the user ID and user account of the remote user, caches them in a mapping table object (userInfo), and triggers this callback on the local client.
     */
     open func rtceEngine(_ engine: AgoraRtcEngineKit, didUpdated userInfo: AgoraUserInfo, withUid uid: UInt) {
-        lprint("updated userinfo for remote user: \(uid)", .Verbose)
-        lprint(String(describing:userInfo), .Verbose)
+        lprint("updated userinfo for remote user: \(uid)", .verbose)
+        lprint(String(describing: userInfo), .verbose)
     }
     /**
     Occurs when the local user role switches in a live broadcast.
@@ -137,7 +138,7 @@ extension ARAudience: AgoraRtcEngineDelegate {
      The SDK triggers this callback when the local user switches the user role by calling the setClientRole method after joining the channel.
     */
     open func rtcEngine(_ engine: AgoraRtcEngineKit, didClientRoleChanged oldRole: AgoraClientRole, newRole: AgoraClientRole) {
-        lprint("didClientRoleChanged from oldRole: \(oldRole) to newRole: \(newRole)", .Verbose)
+        lprint("didClientRoleChanged from oldRole: \(oldRole) to newRole: \(newRole)", .verbose)
     }
     /**
     Occurs when a remote user or host joins a channel.
@@ -158,12 +159,12 @@ extension ARAudience: AgoraRtcEngineDelegate {
         - When a web application joins the channel, the SDK triggers this callback as long as the web application publishes streams.
      */
     open func rtcEngine(_ engine: AgoraRtcEngineKit, didJoinedOfUid uid: UInt, elapsed: Int) {
-        lprint("remote user joined of uid: \(uid)", .Verbose)
+        lprint("remote user joined of uid: \(uid)", .verbose)
         // TODO: Extend to support more than a single broadcaster
         if self.remoteUser == nil {
             agoraKit.enableVideo()
             self.remoteUser = uid // keep track of the remote user
-            lprint("remote host added", .Verbose)
+            lprint("remote host added", .verbose)
         }
     }
     /**
@@ -179,7 +180,7 @@ extension ARAudience: AgoraRtcEngineDelegate {
      - **Drop offline:** When no data packet of the user or host is received for a certain period of time (20 seconds for the Communication profile, and more for the Live-broadcast profile), the SDK assumes that the user/host drops offline. Unreliable network connections may lead to false detections, so Agora recommends using a signaling system for more reliable offline detection.
     */
     open func rtcEngine(_ engine: AgoraRtcEngineKit, didOfflineOfUid uid: UInt, reason: AgoraUserOfflineReason) {
-        lprint("didOfflineOfUid: \(uid) with code: \(reason)", .Verbose)
+        lprint("didOfflineOfUid: \(uid) with code: \(reason)", .verbose)
         if remoteVideoView.subviews.count > 0 {
             for subview in remoteVideoView.subviews {
                 subview.removeFromSuperview()
@@ -211,7 +212,7 @@ extension ARAudience: AgoraRtcEngineDelegate {
      The SDK triggers this callback to report on the current network connection state when it changes, and the reason of the change.
     */
     open func rtcEngine(_ engine: AgoraRtcEngineKit, connectionChangedTo state: AgoraConnectionStateType, reason: AgoraConnectionChangedReason) {
-        lprint("connectionChangedToState: \(state) with code: \(reason)", .Verbose)
+        lprint("connectionChangedToState: \(state) with code: \(reason)", .verbose)
     }
     /**
     Occurs when the local network type changes.
@@ -222,7 +223,7 @@ extension ARAudience: AgoraRtcEngineDelegate {
      When the network connection is interrupted, this callback indicates whether the interruption is caused by a network type change or poor network conditions.
      */
     open func rtcEngine(_ engine: AgoraRtcEngineKit, networkTypeChangedTo type: AgoraNetworkType) {
-        lprint("networkTypeChangedTo: \(type)", .Verbose)
+        lprint("networkTypeChangedTo: \(type)", .verbose)
     }
     /**
     Occurs when the SDK cannot reconnect to Agora’s edge server 10 seconds after its connection to the server is interrupted.
@@ -237,7 +238,7 @@ extension ARAudience: AgoraRtcEngineDelegate {
      If the SDK fails to rejoin the channel 20 minutes after being disconnected from Agora’s edge server, the SDK stops rejoining the channel.
     */
     open func rtcEngineConnectionDidLost(_ engine: AgoraRtcEngineKit) {
-        lprint("rtcEngineConnectionDidLost", .Verbose)
+        lprint("rtcEngineConnectionDidLost", .verbose)
     }
     /**
     Occurs when the token expires in 30 seconds.
@@ -248,7 +249,7 @@ extension ARAudience: AgoraRtcEngineDelegate {
      The user becomes offline if the token used in the joinChannelByToken method expires. The SDK triggers this callback 30 seconds before the token expires to remind the app to get a new token. Upon receiving this callback, generate a new token on the server and call the renewToken method to pass the new token to the SDK.
     */
     open func rtcEngine(_ engine: AgoraRtcEngineKit, tokenPrivilegeWillExpire token: String) {
-        lprint("tokenPrivilegeWillExpire", .Verbose)
+        lprint("tokenPrivilegeWillExpire", .verbose)
     }
     /**
     Occurs when the token expires.
@@ -260,10 +261,9 @@ extension ARAudience: AgoraRtcEngineDelegate {
      Th SDK triggers this callback to notify the app to generate a new token. Call the [renewToken](https://docs.agora.io/en/Video/API%20Reference/oc/Classes/AgoraRtcEngineKit.html#//api/name/renewToken:) method to renew the token.
     */
     open func rtcEngineRequestToken(_ engine: AgoraRtcEngineKit) {
-        lprint("rtcEngineRequestToken", .Verbose)
+        lprint("rtcEngineRequestToken", .verbose)
     }
 
-    
    // MARK: Media Delegate Methods
     /**
     Reports which users are speaking, the speakers' volumes, and whether the local user is speaking.
@@ -283,8 +283,8 @@ extension ARAudience: AgoraRtcEngineDelegate {
      This callback reports the IDs and volumes of the loudest speakers at the moment in the channel, and whether the local user is speaking.  By default, this callback is disabled. You can enable it by calling the enableAudioVolumeIndication method. Once enabled, this callback is triggered at the set interval, regardless of whether a user speaks or not. The SDK triggers two independent [reportAudioVolumeIndicationOfSpeakers](https://docs.agora.io/en/Video/API%20Reference/oc/Protocols/AgoraRtcEngineDelegate.html#//api/name/rtcEngine:reportAudioVolumeIndicationOfSpeakers:totalVolume:) callbacks at one time, which separately report the volume information of the local user and all the remote speakers. For more information, see the detailed parameter descriptions.
     */
     open func rtcEngine(_ engine: AgoraRtcEngineKit, reportAudioVolumeIndicationOfSpeakers speakers: [AgoraRtcAudioVolumeInfo], totalVolume: Int) {
-        lprint("reportAudioVolumeIndicationOfSpeakers, totalVolume: \(totalVolume)", .Verbose)
-        lprint(String(describing: speakers), .Verbose)
+        lprint("reportAudioVolumeIndicationOfSpeakers, totalVolume: \(totalVolume)", .verbose)
+        lprint(String(describing: speakers), .verbose)
     }
    /**
     Occurs when a remote user’s audio stream is muted/unmuted.
@@ -298,7 +298,7 @@ extension ARAudience: AgoraRtcEngineDelegate {
      - Note: This callback is invalid when the number of the users or broadcasters in a channel exceeds 20.
     */
     open func rtcEngine(_ engine: AgoraRtcEngineKit, didAudioMuted muted: Bool, byUid uid: UInt) {
-        lprint("remote user with uid: \(uid), set Audio Muted: \(muted)", .Verbose)
+        lprint("remote user with uid: \(uid), set Audio Muted: \(muted)", .verbose)
     }
     /**
     Reports which user is the loudest speaker over a period of time.
@@ -360,7 +360,7 @@ extension ARAudience: AgoraRtcEngineDelegate {
      This callback is invalid when the number of users or broadcasters in a channel exceeds 20.
      */
     open func rtcEngine(_ engine: AgoraRtcEngineKit, didVideoMuted muted: Bool, byUid uid: UInt) {
-        lprint("remote user with uid: \(uid), set Video Muted: \(muted)", .Verbose)
+        lprint("remote user with uid: \(uid), set Video Muted: \(muted)", .verbose)
     }
     /**
     Occurs when the remote video state changes.
@@ -373,8 +373,8 @@ extension ARAudience: AgoraRtcEngineDelegate {
     */
     open func rtcEngine(_ engine: AgoraRtcEngineKit, remoteVideoStateChangedOfUid uid: UInt, state: AgoraVideoRemoteState, reason: AgoraVideoRemoteStateReason, elapsed: Int) {
         if state == .starting {
-            lprint("firstRemoteVideoStarting for Uid: \(uid)", .Verbose)
-            lprint("remote-user: \(String(describing: self.remoteUser))", .Verbose)
+            lprint("firstRemoteVideoStarting for Uid: \(uid)", .verbose)
+            lprint("remote-user: \(String(describing: self.remoteUser))", .verbose)
             if self.remoteUser == uid {
                 guard let remoteView = self.remoteVideoView else { return }
                 let videoCanvas = AgoraRtcVideoCanvas()
@@ -384,9 +384,9 @@ extension ARAudience: AgoraRtcEngineDelegate {
                 agoraKit.setupRemoteVideo(videoCanvas)
             }
         } else if state == .decoding {
-            lprint("firstRemoteVideoDecoded for Uid: \(uid)", .Verbose)
+            lprint("firstRemoteVideoDecoded for Uid: \(uid)", .verbose)
             if uid != self.remoteUser {
-                lprint("firstRemoteVideoDecoded for Uid: \(uid)", .Verbose)
+                lprint("firstRemoteVideoDecoded for Uid: \(uid)", .verbose)
                 var remoteView: UIView
                 if let existingRemoteView = self.remoteVideoViews[uid] {
                     remoteView = existingRemoteView
@@ -403,7 +403,7 @@ extension ARAudience: AgoraRtcEngineDelegate {
             }
         }
     }
-    
+
     // MARK: Stream Message Delegate Methods
     /**
     Occurs when the local user receives the data stream from a remote user within five seconds.
@@ -417,9 +417,9 @@ extension ARAudience: AgoraRtcEngineDelegate {
      */
     open func rtcEngine(_ engine: AgoraRtcEngineKit, receiveStreamMessageFromUid uid: UInt, streamId: Int, data: Data) {
            // successfully received message from user
-           lprint("STREAMID: \(streamId)\n - DATA: \(data)", .Verbose)
+           lprint("STREAMID: \(streamId)\n - DATA: \(data)", .verbose)
    }
-       
+
     /**
     Occurs when the local user does not receive the data stream from the remote user within five seconds.
     - Parameters:
@@ -434,6 +434,6 @@ extension ARAudience: AgoraRtcEngineDelegate {
      */
     open func rtcEngine(_ engine: AgoraRtcEngineKit, didOccurStreamMessageErrorFromUid uid: UInt, streamId: Int, error: Int, missed: Int, cached: Int) {
            // message failed to send(
-           lprint("STREAMID: \(streamId)\n - ERROR: \(error)", .Verbose)
+           lprint("STREAMID: \(streamId)\n - ERROR: \(error)", .verbose)
    }
 }

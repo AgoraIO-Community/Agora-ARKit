@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>LogLevel Enumeration Reference</title>
+    <title>AgoraARKit Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -13,8 +13,8 @@
     <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
-    <a name="//apple_ref/swift/Enum/LogLevel" class="dashAnchor"></a>
-    <a title="LogLevel Enumeration Reference"></a>
+    <a name="//apple_ref/swift/Class/AgoraARKit" class="dashAnchor"></a>
+    <a title="AgoraARKit Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">AgoraARKit 1.0.7 Docs</a> (61% documented)</p>
@@ -29,7 +29,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">AgoraARKit Reference</a>
         <img id="carat" src="../img/carat.png" />
-        LogLevel Enumeration Reference
+        AgoraARKit Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -84,15 +84,15 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>LogLevel</h1>
+            <h1>AgoraARKit</h1>
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LogLevel</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">AgoraARKit</span></code></pre>
 
                 </div>
               </div>
-            <p>An enum to represent the avialable levels of verbosity for logging.</p>
+            <p>The <code>AgoraARKit</code> object provides static properties to be used when initializing the Agora engine</p>
 
           </section>
           <section class="section task-group-section">
@@ -101,9 +101,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10AgoraARKit8LogLevelO4noneyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/none" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10AgoraARKit8LogLevelO4noneyA2CmF">none</a>
+                    <a name="/s:10AgoraARKitAAC10agoraAppIdSSSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/agoraAppId" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKitAAC10agoraAppIdSSSgvpZ">agoraAppId</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -111,14 +111,25 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The <code>agoraAppId</code> is a static value that is used to connect to the Agora.io service. Get your Agora App Id from <a href="https://console.agora.io">https://console.agora.io</a></p>
+<pre class="highlight swift"><code><span class="kt">AgoraARKit</span><span class="o">.</span><span class="n">agoraAppId</span> <span class="o">=</span> <span class="s">"&lt;Your Agora APP ID&gt;"</span>
+</code></pre>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    the <code>agoraAppId</code> can be set within the <code>AppDelegate</code> or within any <code>ViewController</code>, the only requirement is that the <code>agoraAppId</code> is set before joining a channel. This takes place within the <code>viewWillAppear</code> fucntion for both <code><a href="../Classes/ARBroadcaster.html">ARBroadcaster</a></code> or <code><a href="../Classes/ARAudience.html">ARAudience</a></code> <em>ViewControllers</em>
+
+</div><div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    This value defaults to nil, and will throw a runtime error if not set.
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="k">none</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">agoraAppId</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -128,9 +139,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10AgoraARKit8LogLevelO6normalyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/normal" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10AgoraARKit8LogLevelO6normalyA2CmF">normal</a>
+                    <a name="/s:10AgoraARKitAAC10agoraTokenSSSgvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/agoraToken" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKitAAC10agoraTokenSSSgvpZ">agoraToken</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -138,41 +149,29 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The <code>agoraToken</code> is a static value that is used to as the user&rsquo;s channel token. You can set either a dynamic token or a temp token. Generate a temp token usic <a href="https://console.agora.io">https://console.agora.io</a>. Default is <code>nil</code></p>
+<pre class="highlight swift"><code><span class="kt">AgoraARKit</span><span class="o">.</span><span class="n">agoraToken</span> <span class="o">=</span> <span class="s">"&lt;Your Agora Token&gt;"</span>
+</code></pre>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    The <code>agoraToken</code> can be set within the <code>AppDelegate</code> or within any <code>ViewController</code>, the only requirement is that the <code>agoraToken</code>is set before joining a channel. This takes place within the <code>viewWillAppear</code> fucntion for both <code><a href="../Classes/ARBroadcaster.html">ARBroadcaster</a></code> or <code><a href="../Classes/ARAudience.html">ARAudience</a></code> <em>ViewControllers</em>
+
+</div><div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    You must set a token if you have enabled the certificate on the channel.
+
+<ul>
+<li>If you have not enabled certificate security on your AppiId, then you do not need to set this value.</li>
+</ul>
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">normal</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10AgoraARKit8LogLevelO7verboseyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/verbose" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10AgoraARKit8LogLevelO7verboseyA2CmF">verbose</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">verbose</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">agoraToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>

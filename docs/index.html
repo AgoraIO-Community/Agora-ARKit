@@ -8,12 +8,20 @@
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a title="AgoraARKit  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">AgoraARKit Docs</a> (68% documented)</p>
+        <p><a href="index.html">AgoraARKit 1.0.7 Docs</a> (61% documented)</p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -36,7 +44,10 @@
                 <a href="Classes/ARBroadcaster.html">ARBroadcaster</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes.html#/s:10AgoraARKitAAC">AgoraARKit</a>
+                <a href="Classes/ARVideoSource.html">ARVideoSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AgoraARKit.html">AgoraARKit</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/AgoraLobbyVC.html">AgoraLobbyVC</a>
@@ -75,7 +86,7 @@
             
             <h1 id='agoraarkit' class='heading'>AgoraARKit</h1>
 
-<p>Enabling apps to live stream AR video streams. <strong><a href="https://developer.apple.com/augmented-reality/">ARKit</a></strong>, uses the device&rsquo;s camera and motion sensors to project virtual conetent into a user&rsquo;s world. <strong>Agora.io</strong>, provides a <a href="https://docs.agora.io/en/Video/product_video?platform=All%20Platforms">video SDK</a> for building real-time video and audio communications applications. By combining Agora.io&rsquo;s Video SDK and ARKit, it enables developers to create many different applications across many different use-cases. </p>
+<p>Enabling apps to live stream AR video streams. <strong><a href="https://developer.apple.com/augmented-reality/">ARKit</a></strong>, uses the device&rsquo;s camera and motion sensors to project virtual content into a user&rsquo;s world. <strong>Agora.io</strong>, provides a <a href="https://docs.agora.io/en/Video/product_video?platform=All%20Platforms">video SDK</a> for building real-time video and audio communications applications. By combining Agora.io&rsquo;s Video SDK and ARKit, it enables developers to create many different applications across many different use-cases. </p>
 
 <p>This library provides three classes with managed user itnterfaces:</p>
 
@@ -96,27 +107,24 @@
 </ul>
 
 <p>iOS 12.2 can be downloaded from Apple’s Developer website.</p>
-<h2 id='dependancies' class='heading'>Dependancies</h2>
+<h2 id='dependencies' class='heading'>Dependencies</h2>
 
 <p>AgoraARKit relies on the <a href="https://docs.agora.io/en/Agora%20Platform/downloads">Agora.io Video SDK</a> and <a href="https://github.com/AFathi/ARVideoKit">ARVideoKit</a>.</p>
 <h2 id='support' class='heading'>Support</h2>
 
 <ul>
+<li><a href="https://agoraio-community.github.io/Agora-ARKit">AgoraARKit Documentation</a></li>
 <li><a href="https://docs.agora.io/en/Video/API%20Reference/oc/docs/headers/Agora-Objective-C-API-Overview.html">Agora.io iOS API</a></li>
 <li><a href="https://join.slack.com/t/agoraiodev/shared_invite/enQtNjk0OTg4ODgyNTc5LTczOWQ0YjBkMTMwZDFmYzViYjIxNjg4YTM0OWEzZjdkODM1NDNmOTM1ZTE4Y2Q1ZWUwMjNjMzMxMmZiNGI3ODg">Join the Agoira.io Developer Slack community</a></li>
 </ul>
 <h2 id='quick-start-guide' class='heading'>Quick start guide</h2>
 
 <p>To get started with the AgoraARVideoKit, please follow the steps below to </p>
-<h3 id='set-up-using-cocoapods-coming-soon' class='heading'>Set up using CocoaPods (coming soon)</h3>
-
-<blockquote>
-<p>NOTE: CocoaPods is not currently set up <em>(use Manual Setup below)</em></p>
+<h3 id='set-up-using-cocoapods' class='heading'>Set up using CocoaPods</h3>
 
 <ol>
 <li>Add to your podfile:</li>
 </ol>
-</blockquote>
 
 <p><code>pod &#39;AgoraARKit&#39;</code></p>
 
@@ -124,18 +132,18 @@
 <li>In Terminal, navigate to your project folder, then:</li>
 </ol>
 
-<p><code>pod update</code></p>
-
 <p><code>pod install</code></p>
 
 <ol>
-<li>Add <code>NSCameraUsageDescription</code> and <code>NSMicrophoneUsageDescription</code> to plist with a brief explanation (see demo project for an example)</li>
+<li>Add <code>NSCameraUsageDescription</code>, <code>NSMicrophoneUsageDescription</code>, <code>NSPhotoLibraryAddUsageDescription</code>, and <code>NSPhotoLibraryUsageDescription</code> to plist with a brief explanation. The last two permissions are required by ARVideoKit because of its ability to store photos/videos.</li>
 </ol>
+
+<p><a href="https://github.com/digitallysavvy/AgoraARKitDemo">See demo project for an example</a></p>
 <h3 id='set-up-manually' class='heading'>Set up manually</h3>
 
 <ol>
-<li>Add all files from the <code><a href="Classes.html#/s:10AgoraARKitAAC">AgoraARKit</a></code> directory to your project.</li>
-<li>Import <a href="https://github.com/AFathi/ARVideoKit"><code>ARVideoKit</code></a> and <a href="https://docs.agora.io/en/Agora%20Platform/downloads"><code>Agora.io Video SDK</code></a> SDKS</li>
+<li>Add all files from the <code><a href="Classes/AgoraARKit.html">AgoraARKit</a></code> directory to your project.</li>
+<li>Import <a href="https://github.com/AFathi/ARVideoKit"><code>ARVideoKit</code></a> and <a href="https://docs.agora.io/en/Agora%20Platform/downloads"><code>Agora.io Video SDK</code></a> SDK</li>
 <li>Add <code>NSCameraUsageDescription</code> and <code>NSMicrophoneUsageDescription</code> to plist with a brief explanation (see demo project for an example)</li>
 </ol>
 <h3 id='implementation' class='heading'>Implementation</h3>
@@ -157,6 +165,8 @@ if let agoraLogo = UIImage(named: "ar-support-icon") {
 }
 </code></pre></li>
 </ol>
+
+<p><a href="https://medium.com/@hermes_11327/agoraarkit-quickstart-guide-384028c66163">View the AgoraARKit QuickStart guide on Medium</a></p>
 <h2 id='customization' class='heading'>Customization</h2>
 
 <p>The AgoraARKit classes are extendtable so you can subclass them to customize them as needed. </p>
@@ -211,7 +221,7 @@ if let agoraLogo = UIImage(named: "ar-support-icon") {
 </code></pre>
 <h3 id='arbroadcaster' class='heading'>ARBroadcaster</h3>
 
-<p>The ARBroadcaster is a UIViewController that implements the ARKit Session and Render Delegates along with the Agora RTC Engine Delegate methods. For a full list of each please see the documentation.</p>
+<p>The ARBroadcaster is a UIViewController that implements the ARKit Session and Render Delegates along with the Agora RTC Engine Delegate methods. For a full list of each please see the <a href="https://agoraio-community.github.io/Agora-ARKit">ARKit documentation</a>.</p>
 
 <p>The current <code><a href="Classes/ARBroadcaster.html">ARBroadcaster</a></code> class is setup for <code>WorldTracking</code>, but this can be easily updated to front facing. Below is an example of the <code><a href="Classes/ARBroadcaster.html">ARBroadcaster</a></code> extended for ARKit <code>FaceTracking</code> and also adds support for multiple broadcasters.</p>
 <pre class="highlight plaintext"><code>import ARKit
@@ -262,8 +272,8 @@ class FaceBroadcaster : ARBroadcaster {
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="http://github.com/digitallysavvy/AgoraARKit" target="_blank" rel="external">Hermes</a>. All rights reserved. (Last updated: 2020-02-19)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2021 <a class="link" href="https://github.com/AgoraIO-Community/Agora-ARKit" target="_blank" rel="external">Hermes</a>. All rights reserved. (Last updated: 2021-01-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

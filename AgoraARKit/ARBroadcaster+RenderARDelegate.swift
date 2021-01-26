@@ -17,4 +17,3 @@ extension ARBroadcaster: RenderARDelegate {
         self.arVideoSource.sendBuffer(buffer, timestamp: time.seconds)
     }
 }
-

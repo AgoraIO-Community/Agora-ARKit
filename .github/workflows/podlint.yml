@@ -1,0 +1,19 @@
+name: "Pod Lint"
+
+on:
+  push:
+    branches:
+      - "master"
+  pull_request:
+    branches:
+    - "*"
+
+jobs:
+  podlint:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Pod Lint
+      run: |
+        pod lib lint --allow-warnings --skip-import-validation --verbose
+      shell: bash

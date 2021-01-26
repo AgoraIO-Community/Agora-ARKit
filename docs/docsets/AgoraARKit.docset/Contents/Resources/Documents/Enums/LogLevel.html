@@ -8,13 +8,21 @@
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
     <a name="//apple_ref/swift/Enum/LogLevel" class="dashAnchor"></a>
     <a title="LogLevel Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">AgoraARKit Docs</a> (68% documented)</p>
+        <p><a href="../index.html">AgoraARKit 1.0.7 Docs</a> (61% documented)</p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -37,7 +45,10 @@
                 <a href="../Classes/ARBroadcaster.html">ARBroadcaster</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes.html#/s:10AgoraARKitAAC">AgoraARKit</a>
+                <a href="../Classes/ARVideoSource.html">ARVideoSource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AgoraARKit.html">AgoraARKit</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/AgoraLobbyVC.html">AgoraLobbyVC</a>
@@ -76,6 +87,7 @@
             <h1>LogLevel</h1>
               <div class="declaration">
                 <div class="language">
+                  
                   <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">LogLevel</span> <span class="p">:</span> <span class="kt">Int</span></code></pre>
 
                 </div>
@@ -89,9 +101,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10AgoraARKit8LogLevelO4NoneyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/None" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10AgoraARKit8LogLevelO4NoneyA2CmF">None</a>
+                    <a name="/s:10AgoraARKit8LogLevelO4noneyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/none" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit8LogLevelO4noneyA2CmF">none</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -106,7 +118,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">None</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="k">none</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                         </div>
                       </div>
@@ -116,9 +128,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10AgoraARKit8LogLevelO6NormalyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Normal" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10AgoraARKit8LogLevelO6NormalyA2CmF">Normal</a>
+                    <a name="/s:10AgoraARKit8LogLevelO6normalyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/normal" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit8LogLevelO6normalyA2CmF">normal</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -133,7 +145,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Normal</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">normal</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
 
                         </div>
                       </div>
@@ -143,9 +155,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10AgoraARKit8LogLevelO7VerboseyA2CmF"></a>
-                    <a name="//apple_ref/swift/Element/Verbose" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10AgoraARKit8LogLevelO7VerboseyA2CmF">Verbose</a>
+                    <a name="/s:10AgoraARKit8LogLevelO7verboseyA2CmF"></a>
+                    <a name="//apple_ref/swift/Element/verbose" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10AgoraARKit8LogLevelO7verboseyA2CmF">verbose</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -160,7 +172,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="kt">Verbose</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">verbose</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
 
                         </div>
                       </div>
@@ -172,8 +184,8 @@
           </section>
         </section>
         <section id="footer">
-          <p>&copy; 2020 <a class="link" href="http://github.com/digitallysavvy/AgoraARKit" target="_blank" rel="external">Hermes</a>. All rights reserved. (Last updated: 2020-02-19)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.1</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+          <p>&copy; 2021 <a class="link" href="https://github.com/AgoraIO-Community/Agora-ARKit" target="_blank" rel="external">Hermes</a>. All rights reserved. (Last updated: 2021-01-24)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>
     </div>

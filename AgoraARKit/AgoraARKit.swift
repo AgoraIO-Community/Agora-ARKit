@@ -23,7 +23,7 @@ public class AgoraARKit {
      - Warning: This value defaults to nil, and will throw a runtime error if not set.
      */
     public static var agoraAppId: String!
-    
+
     /**
      The `agoraToken` is a static value that is used to as the user's channel token. You can set either a dynamic token or a temp token. Generate a temp token usic https://console.agora.io. Default is `nil`
      
@@ -38,4 +38,3 @@ public class AgoraARKit {
      */
     public static var agoraToken: String?
 }
-
